@@ -7,7 +7,7 @@ import HeroSection from './heroSection';
 import PersonalBackground from '../interface/personalBackground';
 import HeroSectionProps from '../type/heroSectionProps';
 
-const App = () => {
+const App: () => JSX.Element = () => {
 	const owner: ProjectOwner = Data.ProjectOwner();
 	const ownerDisplayName: string = owner.ToString({ detailed: false });
 	const background: PersonalBackground = owner.background;

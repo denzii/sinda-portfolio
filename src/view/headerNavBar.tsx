@@ -1,7 +1,7 @@
 import '../style/navigation.css';
 import HeaderNavBarProps from '../type/headerNavBarProps';
 
-const HeaderNavBar = (props: HeaderNavBarProps) => <>
+const HeaderNavBar: (props: HeaderNavBarProps) => JSX.Element = (props) => <>
     <div className="nav-container">
         <nav>
             <button className="nav-logo-button" id="menu-btn" onClick={ () => window.scrollTo(0,0) }> { props.logoText }</button>

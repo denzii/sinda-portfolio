@@ -2,7 +2,7 @@ import BackgroundDetail from '../model/backgroundDetail';
 import PersonalBackground from '../interface/personalBackground';
 import '../style/supplementary.css';
 
-const PersonalBackgroundSection = (props: {background: PersonalBackground}) => <>
+const PersonalBackgroundSection: (props: {background: PersonalBackground}) => JSX.Element  = (props) => <>
     {Object.entries(props.background).map(([sectionKey, sectionDetails]: [string, BackgroundDetail[]], index) => 
         <div className={index % 2 === 0 ? "light-background container-fluid" : "dark-background container-fluid"} id={sectionKey} key={sectionKey}>
                 <p className="unit-header">{sectionKey.toUpperCase()} </p>
