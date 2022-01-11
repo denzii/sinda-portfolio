@@ -1,4 +1,4 @@
-.nav-container {
+/* .nav-container {
   position: sticky;
   top: 0;
   left: 0;
@@ -8,7 +8,7 @@
   background-color: #f8f8f8;
 }
 
-.nav-header {
+.nav-logo-button {
   font-size: 24px;
   color: #555555;
   text-decoration: none;
@@ -61,7 +61,7 @@ nav .menu-btn:hover {
   background-color: #f8f8f8;
 }
 
-nav .nav-header {
+nav .nav-logo-button {
   display: block;
   float: left;
   font-size: 24px;
@@ -70,15 +70,11 @@ nav .nav-header {
   color: #555555;
 }
 
-/* menu */
-
 nav .menu {
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
 }
-
-/* menu icon */
 
 nav .menu-icon {
   cursor: pointer;
@@ -116,7 +112,6 @@ nav .menu-icon .navicon:after {
   top: -5px;
 }
 
-/* menu btn */
 
 nav .menu-btn {
   display: none;
@@ -143,8 +138,6 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
-/* 48em = 768px */
-
 @media (min-width: 55em) {
   nav li {
     float: left;
@@ -163,13 +156,13 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 }
 
 @media (max-width: 800px) {
-  .nav-header {
+  .nav-logo-button {
     left: 0px;
   }
 }
 
 @media (max-width: 235px) {
-  .nav-header {
+  .nav-logo-button {
     width: 10px;
     padding-left: 0;
   }
@@ -184,4 +177,4 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   .menu {
     margin-left: -30px;
   }
-}
+} */

@@ -1,9 +1,9 @@
 import "../style/header.css";
-import ImageProps from "../type/imageProps";
+import HeroSectionProps from "../type/heroSectionProps";
 
-const HeroSection = (props: ImageProps) => <>
-    <header className="header-image-container">
-        <img src={props.src} alt={props.alt} className="header-image" />
+const HeroSection = (props: HeroSectionProps) => <>
+    <header className={`header-image-container ${props.container.backgroundImageClass}`}>
+        <img srcSet={`${props.image.src} 0.60x`}  alt={props.image.alt} className="header-image" />
     </header>
 </>
 

@@ -3,10 +3,10 @@ import PersonalBackground from '../interface/personalBackground';
 import '../style/supplementary.css';
 
 const PersonalBackgroundSection = (props: {background: PersonalBackground}) => <>
-    {Object.entries(props.background).map(([sectionKey, sectionDetails], index) => 
+    {Object.entries(props.background).map(([sectionKey, sectionDetails]: [string, BackgroundDetail[]], index) => 
         <div className={index % 2 === 0 ? "light-background container-fluid" : "dark-background container-fluid"} id={sectionKey} key={sectionKey}>
                 <p className="unit-header">{sectionKey.toUpperCase()} </p>
-                {(sectionDetails as BackgroundDetail[]).map((detail) => 
+                {sectionDetails.map((detail: BackgroundDetail) => 
                     <div className="unit-container" key={`${sectionKey}-${detail.title}`}>
                         <div className="unit">
                             <a href={detail.url} target="_blank" rel="noopener noreferrer"> 

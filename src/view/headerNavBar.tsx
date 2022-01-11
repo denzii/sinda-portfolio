@@ -1,14 +1,12 @@
 import '../style/navigation.css';
-import Data from '../data';
 import HeaderNavBarProps from '../type/headerNavBarProps';
 
 const HeaderNavBar = (props: HeaderNavBarProps) => <>
     <div className="nav-container">
         <nav>
-            <button className="nav-header" onClick={ () => window.scrollTo(0,0) }> { props.logoText }</button>
-            <input className="menu-btn" type="checkbox" id="menu-btn" />
+            <button className="nav-logo-button" id="menu-btn" onClick={ () => window.scrollTo(0,0) }> { props.logoText }</button>
             <ul className="menu"> 
-                {Data.NavigationSections().map(section => 
+                {props.navigationLinks.map(section => 
                     <li key={section}>
                         <a href={ "#" + section}> {section.toUpperCase()} </a>
                     </li>

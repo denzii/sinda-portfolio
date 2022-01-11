@@ -1,4 +1,4 @@
-.bigger-icon {
+/* .bigger-icon {
     border: 3px solid;
     border-color: #2f2f2f;
     border-radius: 50%;
@@ -34,13 +34,11 @@
 
 .dark-background {
     background-color: #474e5d;
-    /* Dark Blue */
     color: #ffffff;
 }
 
 .light-background {
     background-color: #ffffff;
-    /* White */
     color: #555555;
 }
 
@@ -109,4 +107,4 @@
     .project-icon {
         width: 170px;
     }
-}
+} */

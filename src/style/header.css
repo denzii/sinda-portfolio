@@ -1,4 +1,4 @@
-.header-image {
+/* .header-image {
     max-width: 425px;
     border-radius: 100%;
     border:3px solid #fff;
@@ -7,17 +7,16 @@
     display:block;
     height:425px;
     width:425px;
-    background: -webkit-image-set(url(../assets/deniz.webp) 0.60x)
 }
 
 .header-image-container {
-    background-image: url(../assets/kilise.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding-top: 80px;
 }
+
 
 @media (max-width: 55em){
     header {
@@ -38,4 +37,10 @@
     header {
         height:600px;
     }
+} */
+
+
+
+.background-image-kilise {
+    background-image: url(../assets/kilise.webp);
 }

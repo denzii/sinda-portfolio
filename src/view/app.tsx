@@ -4,16 +4,20 @@ import PersonalBackgroundSection from './personalBackgroundSection';
 import Data from '../data';
 import ProjectOwner from '../model/projectOwner';
 import HeroSection from './heroSection';
+import PersonalBackground from '../interface/personalBackground';
+import HeroSectionProps from '../type/heroSectionProps';
 
 const App = () => {
-	const projectOwner: ProjectOwner = Data.ProjectOwner();
-	const ownerDisplayName: string = projectOwner.ToString({ detailed: false });
-
+	const owner: ProjectOwner = Data.ProjectOwner();
+	const ownerDisplayName: string = owner.ToString({ detailed: false });
+	const background: PersonalBackground = owner.background;
+	const heroProps: HeroSectionProps = Data.HeroSectionProps();
+	
 	return <>
-		<HeaderNavBar logoText={ownerDisplayName} />
-    	<HeroSection alt={projectOwner.image.alt} src={projectOwner.image.src}/>
-    	<SocialMediaBar />
-		<PersonalBackgroundSection background={projectOwner.background} />
+		<HeaderNavBar logoText={ownerDisplayName} navigationLinks={Object.keys(background)}/>
+    	<HeroSection  image={heroProps.image} container={heroProps.container}/>
+    	<SocialMediaBar urls={owner.urls}/>
+		<PersonalBackgroundSection background={background} />
 	</>
 }
 

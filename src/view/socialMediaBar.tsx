@@ -1,14 +1,13 @@
 import '../style/social.css';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import PersonalURLs from '../interface/personalUrls';
+import ExternalNavigationProps from '../type/externalNavigationProps';
 
-const SocialMediaBar = () => <>
-    <div>
-       <div className="fa-container">
-            <a href="https://www.linkedin.com/in/deniz-arca/" aria-label='Linkedin Profile' className='fa'> <FaLinkedin/> </a>
-            <a href="https://www.github.com/denzii/" aria-label='Github Profile' className="fa"> <FaGithub/> </a>
-            <a href="mailto: denizarca.info@gmail.com" aria-label='Email Address' className="fa"> <FaEnvelope/> </a>
+const SocialMediaBar = (props: {urls: PersonalURLs}) => <>
+    {Object.entries(props.urls).map(([siteName, navigationProps]: [string, ExternalNavigationProps]) => 
+        <div className="fa-container" key={siteName}>
+            <a href={navigationProps.url} aria-label={`${siteName} Profile`} className='fa'> {<navigationProps.icon/>} </a>
         </div>
-    </div>
+    )}
 </>
 
 export default SocialMediaBar;
