@@ -1,14 +1,16 @@
 import IPlainOldObject from "../interface/plainOldObject";
+import DetailTitle from "../type/detailTitle";
 import ImageProps from "../type/imageProps";
 
 export default class BackgroundDetail implements IPlainOldObject {
-    title: string; 
+    title?: DetailTitle; 
     dateRange: string; 
     description: string;
-    url: string;
+    url?: string;
     image: ImageProps
 
-    constructor(title: string, dateRange: string, description: string, url: string, image: ImageProps) {
+
+    constructor(title: DetailTitle | undefined, dateRange: string, description: string, url: string | undefined, image: ImageProps) {
         this.title = title;
         this.dateRange = dateRange;
         this.description = description;

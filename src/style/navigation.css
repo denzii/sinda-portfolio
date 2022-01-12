@@ -1,4 +1,4 @@
-/* .nav-container {
+.nav-container {
   position: sticky;
   top: 0;
   left: 0;
@@ -177,4 +177,15 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   .menu {
     margin-left: -30px;
   }
-} */
+}
+
+hr{
+  display: block;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: double;
+  border-width: 0.1px;
+  border-color: rgba(117, 117, 117, 0.39);
+}

@@ -25,8 +25,8 @@ export default class Data {
 
     public static HeroSectionProps: () => HeroSectionProps = () => {
         return {
-            image: { alt: "Deniz Arca Headshot", src: require("../assets/deniz.webp")},
-            container: { backgroundImageClass: "background-image-kilise" },
+            image: { alt: "Deniz Arca Headshot", caption: undefined, src: require("../assets/deniz.webp")},
+            container: { backgroundImageClass: "background-image-kilise", backgroundImage: require("../assets/kilise.webp")},
         };
     }
 
@@ -42,62 +42,62 @@ export default class Data {
 
     private static WorkExperience: () => BackgroundDetail[] = () => [
         new BackgroundDetail(
-            "Wren Kitchens",
+            {text: "Wren Kitchens", definition: "Britain's leading Kitchens designer/manufacturer with an award winning IT department & over 90 stores."},
             "October 2018 - February 2020",
             "Worked as a Junior Developer for Wren's Logistics team, my role mainly included but was not limited to backend systems.",
             "https://www.wrenkitchens.com/",
-            { alt: "Wren Kitchens Logo", src: require("../assets/wren.webp")}
+            { alt: "Wren Kitchens Logo", caption: undefined, src: require("../assets/wren.webp")}
         ),
         new BackgroundDetail(
-            "Mindgeek", 
+            {text: "Mindgeek", definition: "Global innovators in FinTech & Media Content Delivery specializing in the Adult Entertainment Industry."}, 
             "August 2020 - December 2021", 
             "Worked as a Full Stack Developer on several internal & customer facing domains ranging from video & live streaming services to financial technology.",
             "https://www.mindgeek.com/",
-            { alt: "Mindgeek Logo", src: require("../assets/mindgeek.webp")}
+            { alt: "Mindgeek Logo", caption: undefined, src: require("../assets/mindgeek.webp")}
         ),
     ];
 
     private static EducationHistory: () => BackgroundDetail[] = () => [
         new BackgroundDetail(
-            "University of Hull", 
+            {text: "University of Hull", definition: "A public research university in Kingston upon Hull, a city in the East Riding of Yorkshire, England."}, 
             "2014 - 2018", 
             "Bachelor's degree, Computer Software Engineering, First Class with Honours.",
             "https://www.hull.ac.uk/",
-            { alt: "University of Hull Logo", src: require("../assets/hull3.webp")}
+            { alt: "University of Hull Logo", caption: undefined, src: require("../assets/hull3.webp")}
         ),
     ];
     
     private static PersonalProjects: () => BackgroundDetail[] = () => [
         new BackgroundDetail(
-            "Web Portfolio", 
+            {text:  "Web Portfolio", definition:"(Create React App) with HTML5 & CSS3 Grid."}, 
             "July 2020", 
             "A simplistic Static Web Portfolio built using ReactJS as a first attempt on learning the framework.",
             "https://github.com/denzii/web-portfolio/",
-            { alt: "ReactJS Logo", src: require("../assets/logo192.webp")}
+            { alt: "ReactJS Logo", caption: undefined, src: require("../assets/logo192.webp")}
         ),
         new BackgroundDetail(
-            "Auth Server API", 
+            {text: "Auth Server API", definition: ".NET Core 3.1 with Swagger, EFCore (Code First) & Identity Framework."}, 
             "April 2020", 
-            "A REST appropriated JSON API project built using .NET Core 3.1." +
-            "The aim of this project is to provide Authentication / Authorization services which would be consumed by third party apps." +
-            "Includes a Unit Test project & a SDF making it easier to implement JWT Bearer Authentication.",
+            "A REST appropriated learning project implementing JWT authentication & authorization with refresh tokens. " +
+            "Makes extensive use of custom implemented controller middlewares. " +
+            "Includes a Unit Test project & a SDK for consumption. ",
             "https://github.com/denzii/AuthManager",
-            { alt: ".NET Core Logo", src: require("../assets/project.webp") }
+            { alt: ".NET Core Logo", caption: undefined, src: require("../assets/project.webp") }
         ),
     ];
 
     private static RecreationalActivities: () => BackgroundDetail[] = () => [
         new BackgroundDetail(
-            "Hiking", 
+            {text: "Hiking", definition: ""}, 
             "",
             "The best aspect of any hike is spending time with quality people.",
-            "",
-            { alt: "Icon with pitched tents", src: require("../assets/hike2.webp")}
+            undefined,
+            { alt: "Icon with pitched tents", caption:"", src: require("../assets/hike2.webp")}
         ),
-        new BackgroundDetail("Meditation",  "", "Nothing better than a sound mind.", "", { alt: "Icon with a mandala", src: require("../assets/mandala.webp")}),
+        new BackgroundDetail({text: "Meditation", definition: ""},  "", "Nothing better than a sound mind.", undefined, { alt: "Icon with a mandala", caption: undefined, src: require("../assets/mandala.webp")}),
     ];
 
     private static Resume: () => BackgroundDetail[] = () =>  [
-        new BackgroundDetail("", "", "", require('../assets/resume.pdf'), { alt: "Icon with pitched tents", src: require("../assets/eye.webp")})
+        new BackgroundDetail(undefined, "", "", require('../assets/resume.pdf'), { alt: "Icon with an eye", caption: "Download PDF now!", src: require("../assets/eye.webp")})
     ];
 }

@@ -1,4 +1,4 @@
-/* .fa {
+.fa {
     padding-top: 10px;
     padding-left:42px;
     font-size: 40px;
@@ -29,4 +29,14 @@
         width: 10px;
         padding-left: 0;
     }
-} */
+}
+hr{
+    display: block;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: double;
+    border-width: 0.1px;
+    border-color: rgba(117, 117, 117, 0.39);
+}
