@@ -1,8 +1,9 @@
 import IPlainOldObject from "../interface/plainOldObject";
 import ToStringProps from "../type/toStringProps";
 import Util from "../util";
-import PersonalBackground from "../interface/personalBackground";
+import Background from "../interface/background";
 import PersonalURLs from "../interface/personalUrls";
+import Brand from "../interface/brand";
 
 export default class ProjectOwner implements IPlainOldObject{
     firstName: string;
@@ -10,15 +11,15 @@ export default class ProjectOwner implements IPlainOldObject{
     lastName: string;
     birthYear: number;
     urls: PersonalURLs;
-    background: PersonalBackground;  
+    background: Background;
 
-    constructor(firstName: string, middleName: string|undefined, lastName: string, birthYear: number, urls: PersonalURLs, background: PersonalBackground) {
+    constructor(firstName: string, middleName: string|undefined, lastName: string, birthYear: number, urls: PersonalURLs, background: Background) {
         this.firstName = firstName;
         this.middleName = middleName ?? "";
         this.lastName = lastName;
         this.birthYear = birthYear;
         this.urls = urls;
-        this.background = background;    
+        this.background = background;
     }
 
     ToString = (props?: ToStringProps) => props?.detailed 
