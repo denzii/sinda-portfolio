@@ -1,6 +1,7 @@
-import '../style/navigation.css';
+// import '../style/navigation.css';
 import { connect, ComponentConstructor }  from '../model/view/context';
 import Context from '../type/context';
+import _ from '../model/view/keyableFragment';
 
 type HeaderNavProps =  { logoText: string; navigationLinks: string[]; };
 
@@ -11,15 +12,14 @@ const Data: ContextReducer = (context: Context) => ({
 });
 
 const Nav: (props: HeaderNavProps) => JSX.Element = (props) => <>
-    <label className="menu-icon" htmlFor="menu-btn"> <span className="navicon"/> </label>
-    <button className="nav-logo-button" id="menu-btn" onClick={ () => window.scrollTo(0,0) }> { props.logoText }</button>
-    <ul className="menu">
-        {props.navigationLinks.map(sectionKey => 
-            <a key={sectionKey} href={ `#${sectionKey}`}> {sectionKey.toUpperCase()} </a>
-        )}
+    <label /*className="menu-icon"*/ htmlFor="menu-btn"> <span /*className="navicon"*//> </label>
+    <a tabIndex={0} href="/#"/* className="nav-logo-button" id="menu-btn"*/  title='Scroll to Top'> { props.logoText }</a>
+    <ul /*className="menu"*/>
+        {props.navigationLinks.map(sectionKey => <_ key={sectionKey}>
+            <a tabIndex={0} href={ `/#${sectionKey}`}  title={`Scroll to ${sectionKey} section`}> {sectionKey.toUpperCase()} </a>
+        </_>)}
     </ul>
 </>
 
 const WithContextConsumer: ComponentConstructor = connect(Data);
 export default WithContextConsumer(Nav);
-

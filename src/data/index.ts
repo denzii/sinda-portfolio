@@ -23,20 +23,26 @@ export default class Data {
         resume: Data.Resume()
     })
 
+    public static PersonalBrand: () => Brand = () => ({
+        urls: Data.PersonalUrls(),
+        background: {alt:"Background image portraying an abandoned Orthodox church in Famagusta, Northern Cyprus", imageStyleClass: "background-image-kilise", src: require("../assets/kilise.webp")},
+        headshot: { alt: "Deniz Arca's professional Headshot from the year 2017", caption: "Deniz Arca", src: require("../assets/deniz.webp"), title:"Deniz Arca, 2017"},
+    });
+
     private static WorkExperience: () => Detail[] = () => [
         new Detail(
             {text: "Wren Kitchens", definition: "Britain's leading Kitchens designer/manufacturer with an award winning IT department & over 90 stores."},
             "October 2018 - February 2020",
             "Worked as a Junior Developer for Wren's Logistics team, my role mainly included but was not limited to backend systems.",
             "https://www.wrenkitchens.com/",
-            { alt: "Wren Kitchens Logo", caption: undefined, src: require("../assets/wren.webp")}
+            { alt: "Official Wren Kitchens Corporate Logo", caption: undefined, src: require("../assets/wrenkitchens.webp"), title: "Wren Kitchens Logo"}
         ),
         new Detail(
             {text: "Mindgeek", definition: "Global innovators in FinTech & Media Content Delivery specializing in the Adult Entertainment Industry."}, 
             "August 2020 - December 2021", 
             "Worked as a Full Stack Developer on several internal & customer facing domains ranging from video & live streaming services to financial technology.",
             "https://www.mindgeek.com/",
-            { alt: "Mindgeek Logo", caption: undefined, src: require("../assets/mindgeek.webp")}
+            { alt: "Unofficial Mindgeek Logo with a brain drawing on black & white", caption: undefined, src: require("../assets/mgholdings.webp"), title: "Mindgeek Logo (Unofficial)"}
         ),
     ];
 
@@ -46,7 +52,7 @@ export default class Data {
             "2014 - 2018", 
             "Bachelor's degree, Computer Software Engineering, First Class with Honours.",
             "https://www.hull.ac.uk/",
-            { alt: "University of Hull Logo", caption: undefined, src: require("../assets/hull3.webp")}
+            { alt: "Official University Of Hull Logo", caption: undefined, src: require("../assets/uniofhull.webp"), title: "University of Hull Logo"}
         ),
     ];
     
@@ -56,7 +62,7 @@ export default class Data {
             "July 2020", 
             "A simplistic Static Web Portfolio built using ReactJS as a first attempt on learning the framework.",
             "https://github.com/denzii/web-portfolio/",
-            { alt: "ReactJS Logo", caption: undefined, src: require("../assets/logo192.webp")}
+            { alt: "Official Reactjs Logo", caption: undefined, src: require("../assets/reactlogo.webp"), title: "ReactJS Logo"}
         ),
         new Detail(
             {text: "Auth Server API", definition: ".NET Core 3.1 with Swagger, EFCore (Code First) & Identity Framework."}, 
@@ -65,7 +71,7 @@ export default class Data {
             "Makes extensive use of custom implemented controller middlewares. " +
             "Includes a Unit Test project & a SDK for consumption. ",
             "https://github.com/denzii/AuthManager",
-            { alt: ".NET Core Logo", caption: undefined, src: require("../assets/project.webp") }
+            { alt: "Unofficial .Net Core Web Api Logo", caption: undefined, src: require("../assets/authserver.webp"), title: ".NET Core Logo (Unofficial)" }
         ),
     ];
 
@@ -75,20 +81,24 @@ export default class Data {
             "",
             "The best aspect of any hike is spending time with quality people.",
             undefined,
-            { alt: "Icon with pitched tents", caption:"", src: require("../assets/hike2.webp")}
+            { alt: "Icon of Three Triangles representing tents for camping", caption:"", src: require("../assets/tents.webp") , title: "Pitched tents icon"}
         ),
-        new Detail({text: "Meditation", definition: ""},  "", "Nothing better than a sound mind.", undefined, { alt: "Icon with a mandala", caption: undefined, src: require("../assets/mandala.webp")}),
+        new Detail(
+            {text: "Meditation", definition: ""},
+            "", 
+            "Nothing better than a sound mind.", 
+            undefined, 
+            { alt: "Icon of Black & White Mandala portraying a flower", caption: undefined, src: require("../assets/mandala.webp"), title: "Mandala Icon"}),
     ];
 
     private static Resume: () => Detail[] = () =>  [
-        new Detail(undefined, "", "", require('../assets/resume.pdf'), { alt: "Icon with an eye", caption: "Download PDF now!", src: require("../assets/eye.webp")})
+        new Detail(
+            undefined,
+            "", 
+            "", 
+            require('../assets/resume.pdf'), 
+            { alt: "Icon of dlack dot enclosed within an almond shape portraying an eye", caption: "Download PDF now!", src: require("../assets/eye.webp"), title: "Eye Icon"})
     ];
-
-    public static PersonalBrand: () => Brand = () => ({
-        urls: Data.PersonalUrls(),
-        background: {alt:"Background image portraying an abandoned Orthodox church in Famagusta, Northern Cyprus", imageStyleClass: "background-image-kilise", src: require("../assets/kilise.webp")},
-        headshot: { alt: "Deniz Arca Professional Headshot", caption: undefined, src: require("../assets/deniz.webp")},
-    });
 
     private static PersonalUrls: () => PersonalURLs = () => ({
         linkedin: { url: "https://www.linkedin.com/in/deniz-arca/", icon: FaLinkedin },

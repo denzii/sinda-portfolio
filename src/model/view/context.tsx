@@ -8,7 +8,7 @@ export type ComponentConstructor = (targetComponent: BaseJSXConstructor) => (pro
 export type BaseJSXConstructor = (props?: any) => JSX.Element;
 export type ContextProvider = (TargetComponent: BaseJSXConstructor) => (props: any) => JSX.Element;
 
-export const AppContext = createContext<Context>({ owner: Data.ProjectOwner() });
+export const AppContext = createContext<Context|undefined>(undefined/*{ owner: Data.ProjectOwner() }*/);
 
 export const getBaseProps: PropsReducer = (baseProps: object) => ({ ...baseProps });
 
@@ -17,7 +17,13 @@ export const connect: ComponentDataConnector = (getProps: PropsReducer = getBase
 
     return (props: any) => 
         <AppContext.Consumer>
-            {(context: Context) =>  <TargetComponent {...(mergeObjects([getProps(context), props]))} /> }
+            {(context?: Context) => {
+                if (!context) 
+                    throw Error(`Context is undefined at the ${TargetComponent.name} component. This is caused either by omitting a default value for context or not setting a provider for it.`);
+                
+                const contextProps = getProps(context);
+                return <TargetComponent {...(mergeObjects([contextProps, props]))} />
+            }}
         </AppContext.Consumer>
 }
 

@@ -3,7 +3,6 @@ import ToStringProps from "../type/toStringProps";
 import Util from "../util";
 import Background from "../interface/background";
 import PersonalURLs from "../interface/personalUrls";
-import Brand from "../interface/brand";
 
 export default class ProjectOwner implements IPlainOldObject{
     firstName: string;

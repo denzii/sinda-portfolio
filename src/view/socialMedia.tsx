@@ -1,8 +1,10 @@
-import '../style/social.css';
+// import '../style/social.css';
 import PersonalURLs from '../interface/personalUrls';
 import ExternalNavigationProps from '../type/externalNavigationProps';
 import { connect, ComponentConstructor }  from '../model/view/context';
 import AppContext from '../type/context';
+import _ from '../model/view/keyableFragment';
+import Util from '../util';
 
 type SocialMediaSectionProps =  { urls: PersonalURLs };
 
@@ -12,14 +14,17 @@ const Data: ContextReducer = (context: AppContext) => ({
 });
 
 const SocialMedia: (props: SocialMediaSectionProps) => JSX.Element  = (props) => <>
-    {Object.entries(props.urls).map(([targetName, navigationProps]: [string, ExternalNavigationProps]) => 
-        <address className="fa-container" key={targetName}>
-            <a href={targetName === "email" ? `mailto: ${navigationProps.url}` : navigationProps.url} aria-label={`${targetName} Profile`} className='fa'> 
-                <navigationProps.icon/> 
-            </a>
+    {Object.entries(props.urls).map(([targetPlatformName, navigationProps]: [string, ExternalNavigationProps]) => <_ key={targetPlatformName} >
+        <address /* className="fa-container" */>
+                <a tabIndex={0} href={getTargetPlatformHref(targetPlatformName, navigationProps.url)} title={`My ${Util.Capitalize(targetPlatformName)}`} aria-label={`My ${targetPlatformName} URL`} 
+                className='fa' > 
+                    <navigationProps.icon/> 
+                </a>
         </address>
-    )}
+    </_>)}
 </>
+
+const getTargetPlatformHref: (targetPlatformName: string, navigationUrl: string) => string = (targetPlatformName, navigationUrl) => targetPlatformName === "email" ? `mailto: ${navigationUrl}` : navigationUrl;
 
 const WithContextConsumer: ComponentConstructor = connect(Data);
 export default WithContextConsumer(SocialMedia);

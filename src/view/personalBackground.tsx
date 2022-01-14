@@ -1,11 +1,11 @@
-import '../style/supplementary.css';
+// import '../style/supplementary.css';
 import Detail from '../model/detail';
 import Background from '../interface/background';
 import { ElementType } from 'react';
 import HTMLTag from '../model/view/htmlTag';
 import AppContext from '../type/context';
 import { connect, ComponentConstructor }  from '../model/view/context';
-
+import _ from '../model/view/keyableFragment';
 type PersonalBackgroundProps =  { background: Background };
 
 type ContextReducer =  (context: AppContext) => PersonalBackgroundProps;
@@ -14,19 +14,19 @@ const Data: ContextReducer = (context: AppContext) => ({
 });
 
 const PersonalBackground: (props: PersonalBackgroundProps) => JSX.Element  = (props) => <>
-    {Object.entries(props.background).map(([sectionKey, sectionDetails]: [string, Detail[]], backgroundIndex) => 
-        <dl className={backgroundIndex % 2 === 0 ? "light-background container-fluid" : "dark-background container-fluid"} key={sectionKey}>
-            <dt className="unit-header">{sectionKey.toUpperCase()} </dt>
-            {sectionDetails.map((detail: Detail) => 
-                <dd role="definition" className="unit-container" key={`${sectionKey}-${detail.title?.text}`}>
-                    <HTMLTag as={getDetailTag(sectionKey)} className="unit" role="listitem">
+    {Object.entries(props.background).map(([sectionKey, sectionDetails]: [string, Detail[]], sectionIndex) => <_ key={sectionKey}>
+        <dl id={sectionKey}/*className={getSectionStyleClass()}*/>
+            <dt /*className="unit-header"*/>{sectionKey.toUpperCase()} </dt>
+            {sectionDetails.map((detail: Detail) => <_ key={`${sectionKey}-${detail.title?.text}`}>
+                <dd role="definition" /*className="unit-container"*/>
+                    <HTMLTag as={getDetailTag(sectionKey)} role="listitem" /*className="unit"*/>
                         <fieldset>
                             <address role='link'>
-                                <a href={detail.url ?? `#${sectionKey}`} target={detail.url ? "_blank" : "_self"} rel="noopener noreferrer"> 
+                                <a href={detail.url ?? `#${sectionKey}`} /*target={detail.url ? "_blank" : "_self"} rel="noopener noreferrer"*/> 
                                     <figure> 
-                                        <img src={detail.image.src} alt={detail.image.alt} className="bigger-icon"/>
+                                        <img src={detail.image.src} alt={detail.image.alt} title={detail.image.title}/*className="bigger-icon"*//>
                                         {detail.image.caption && 
-                                            <figcaption className={backgroundIndex % 2 === 0 ? "dark-overlay light-text" : "light-overlay dark-text"}> 
+                                            <figcaption /*className={getDetailFigureCaptionStyleClass()}*/> 
                                                 <strong>{detail.image.caption}</strong>
                                             </figcaption>
                                         }
@@ -35,21 +35,22 @@ const PersonalBackground: (props: PersonalBackgroundProps) => JSX.Element  = (pr
                             </address>
                             {detail.title &&                 
                                 <details open={true}>
-                                    <summary className="lead"> <dfn title={detail.title.definition}> {detail.title.text} </dfn> </summary>
+                                    <summary tabIndex={0} /*className="lead"*/> <dfn title={detail.title.definition}> {detail.title.text} </dfn> </summary>
                                     <small> {detail.dateRange} </small>
-                                    <p className="lead"> {detail.description} </p>
+                                    <p /*className="lead"*/> {detail.description} </p>
                                 </details>
                             }
                         </fieldset>
                     </HTMLTag>
                 </dd>
-            )}
-            <hr/>
+            </_>)}
         </dl>
-    )}
+    </_>)}
 </>
 
 const getDetailTag: (sectionKey: string) => ElementType = (sectionKey) => (["resume", "hobbies"].includes(sectionKey) ? "aside" : "article");
+const getDetailFigureCaptionStyleClass: (sectionIndex: number) => string = (sectionIndex) => sectionIndex % 2 === 0 ? "dark-overlay light-text" : "light-overlay dark-text";
+const getSectionStyleClass: (sectionIndex: number) => string = (sectionIndex) => sectionIndex % 2 === 0 ? "light-background container-fluid" : "dark-background container-fluid";
 
 const WithContextConsumer: ComponentConstructor = connect(Data);
 export default WithContextConsumer(PersonalBackground);
