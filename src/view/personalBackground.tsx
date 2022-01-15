@@ -6,6 +6,7 @@ import HTMLTag from '../model/view/htmlTag';
 import AppContext from '../type/context';
 import { connect, ComponentConstructor }  from '../model/view/context';
 import _ from '../model/view/keyableFragment';
+
 type PersonalBackgroundProps =  { background: Background };
 
 type ContextReducer =  (context: AppContext) => PersonalBackgroundProps;
@@ -14,15 +15,15 @@ const Data: ContextReducer = (context: AppContext) => ({
 });
 
 const PersonalBackground: (props: PersonalBackgroundProps) => JSX.Element  = (props) => <>
-    {Object.entries(props.background).map(([sectionKey, sectionDetails]: [string, Detail[]], sectionIndex) => <_ key={sectionKey}>
-        <dl id={sectionKey}/*className={getSectionStyleClass()}*/>
-            <dt /*className="unit-header"*/>{sectionKey.toUpperCase()} </dt>
-            {sectionDetails.map((detail: Detail) => <_ key={`${sectionKey}-${detail.title?.text}`}>
+    {Object.entries(props.background).map(([sectionName, sectionDetails]: [string, Detail[]], sectionIndex) => <_ key={sectionName}>
+        <dl id={sectionName}/*className={getSectionStyleClass()}*/>
+            <dt /*className="unit-header"*/>{sectionName.toUpperCase()} </dt>
+            {sectionDetails.map((detail: Detail) => <_ key={`${sectionName}${detail.title?.text ?? ""}`}>
                 <dd role="definition" /*className="unit-container"*/>
-                    <HTMLTag as={getDetailTag(sectionKey)} role="listitem" /*className="unit"*/>
+                    <HTMLTag as={getDetailTag(sectionName)} role="listitem" /*className="unit"*/>
                         <fieldset>
                             <address role='link'>
-                                <a href={detail.url ?? `#${sectionKey}`} /*target={detail.url ? "_blank" : "_self"} rel="noopener noreferrer"*/> 
+                                <a href={detail.url ?? `#${sectionName}`} /*target={detail.url ? "_blank" : "_self"} rel="noopener noreferrer"*/> 
                                     <figure> 
                                         <img src={detail.image.src} alt={detail.image.alt} title={detail.image.title}/*className="bigger-icon"*//>
                                         {detail.image.caption && 
@@ -54,3 +55,4 @@ const getSectionStyleClass: (sectionIndex: number) => string = (sectionIndex) =>
 
 const WithContextConsumer: ComponentConstructor = connect(Data);
 export default WithContextConsumer(PersonalBackground);
+
