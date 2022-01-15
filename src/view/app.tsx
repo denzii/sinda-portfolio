@@ -1,10 +1,9 @@
-// import "../style/app.css"
+import "../style/app.css"
 import Nav from './nav';
 import SocialMedia from './socialMedia';
 import PersonalBackground from './personalBackground';
 import ImageProps from "../type/imageProps";
 import React from 'react';
-// import { withContextProvider } from '../model/view/context';
 
 type AppProps =  { headshot: ImageProps; background: ImageProps; };
 
@@ -17,7 +16,7 @@ const App: (props: AppProps) => JSX.Element = (props) =>  <>
 			</nav>
 		</header>
 		<hr/>
-		<section role="presentation" className={/*`header-image-container*/ `${props.background.imageStyleClass}`} aria-label={props.background.alt}>
+		<section role="img" className={/*`header-image-container*/ `${props.background.imageStyleClass}`} aria-label={`${props.background.alt} & ${props.headshot.alt}`}>
 			<h2 className='hidden'> Presentational hero section images with a centered professional headshot and a background image.</h2>
 			<img srcSet={`${props.headshot.src} 0.60x`}  alt={props.headshot.alt} title={props.headshot.title}/>
 		</section>
@@ -31,9 +30,9 @@ const App: (props: AppProps) => JSX.Element = (props) =>  <>
 			<h2 className='hidden'> Personal Background Sections. </h2>
 			<PersonalBackground /> 
 		</main>
-		<footer tabIndex={0}> 
+		<footer> 
 			<h2 className='hidden'> Copyright notice. </h2>
-			By Sindagal OpenSource, Licensed as MIT. 
+			<p> By Sindagal OpenSource, Licensed as MIT. </p>
 		</footer>
 	</React.StrictMode>
 </>

@@ -1,4 +1,4 @@
-.hidden {
+/* .hidden {
     position: absolute;
     top: -9999px;
     left: -9999px;
@@ -58,4 +58,12 @@ hr {
     border-style: double;
     border-width: 0.1px;
     border-color: rgba(117, 117, 117, 0.39);
+} */
+
+.no-style {
+    all: initial;
+}
+  
+.no-style * {
+    all: unset
 }

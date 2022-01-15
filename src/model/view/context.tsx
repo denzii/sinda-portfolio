@@ -27,13 +27,12 @@ export const connect: ComponentDataConnector = (getProps: PropsReducer = getBase
         </AppContext.Consumer>
 }
 
-
 //I will always use the context with data which exist at the point of creating the context, why can't it be the default one?
 //Is this really needed at all?
-// export const withContextProvider = (TargetComponent: BaseJSXConstructor) => {
-//     return (props: any) => 
-//         <AppContext.Provider value={{ owner: Data.ProjectOwner() }}>       
-//             <TargetComponent {...props} />
-//         </AppContext.Provider>
-// }
+export const withContextProvider = (TargetComponent: BaseJSXConstructor) => {
+    return (props: any) => 
+        <AppContext.Provider value={{ owner: Data.ProjectOwner() }}>       
+            <TargetComponent {...props} />
+        </AppContext.Provider>
+}
     
