@@ -1,0 +1,16 @@
+@import "./_mixins";
+@import "./_variables";
+
+#hero {
+	@include heroSectionBackgroundImageRules();
+
+  	display: flex;
+  	flex-wrap: nowrap;
+
+  	#foreground {
+		@include heroSectionForegroundImageRules();
+    	border:0.125em solid #fff;
+    	background: linear-gradient(neumorphDegree(upper-left-lightsource), #2a2a2a, #323232);
+    	box-shadow:  8px 20px 15px #242424, 4px -5px 10px #666666;
+  	}
+}

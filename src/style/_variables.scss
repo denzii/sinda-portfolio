@@ -1,0 +1,27 @@
+$scrollbar: (
+    moz-thin: thin,
+    webkit-thin: 0.5rem,
+    background-colour: #1e1e24,
+    colour: #9a978a
+);
+
+@function scrollbar($propName){
+    @return map-get($scrollbar, $propName);
+}
+
+$neumorphDegree: (
+    bottom-right-lightsource: 315deg,
+    upper-left-lightsource: 145deg
+);
+
+@function neumorphDegree($propName){
+    @return map-get($neumorphDegree, $propName);
+}
+
+$global-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$global-font-colour: #555;
+
+
+$tabletBreakpoint:1280px;
+$mobileBreakpoint:800px;
+$lowEndBreakpoint:485px;

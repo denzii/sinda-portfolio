@@ -1,0 +1,22 @@
+@import "./_mixins";
+@import "./_variables";
+
+#footer {
+    text-align: center;
+    * {
+        position: relative;
+    
+        /* include margin into total width */
+        box-sizing: border-box;
+        margin: auto;
+        margin-bottom: 2px;
+        
+        padding: 20px;
+        margin-top: -0px;
+        border-radius: 5.5%;
+    
+        /* neumorphic shadow */
+        background: linear-gradient(get-map($neumorphDegree, bottom-right-lightsource), #ffffff, #e6e6e6);
+        box-shadow:  -5px -5px 10px #7e7e7e, 5px 5px 10px #8b8b8b;
+    }
+}
