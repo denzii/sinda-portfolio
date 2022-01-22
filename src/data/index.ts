@@ -213,7 +213,7 @@ export default class Data {
     ];
 
     private static PersonalUrls: () => PersonalURLs = () => ({
-        linkedin: { url: "https://www.linkedin.com/in/deniz-arca/", icon: FaLinkedin },
+        linkedin: { url: "https://www.linkedin.com/in/denizarca", icon: FaLinkedin },
         github: { url: "https://www.github.com/denzii/", icon: FaGithub },
         email: {url: "denizarca.info@gmail.com", icon: FaEnvelope }
     });

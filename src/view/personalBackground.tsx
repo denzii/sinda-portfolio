@@ -1,4 +1,4 @@
-import '../style/personalBackground.css';
+import '../style/personalBackground.scss';
 import Detail from '../model/detail';
 import Background from '../interface/background';
 import { ElementType } from 'react';
@@ -29,7 +29,7 @@ const PersonalBackground: (props: PersonalBackgroundProps) => JSX.Element  = (pr
                                     <a href={detail.url ?? `#${sectionName}`} target={detail.url ? "_blank" : "_self"} rel="noopener noreferrer"> 
                                         <figure>
                                             <picture className="image-container">
-                                                <img className="detail-image zoom" src={detail.image.src} alt={detail.image.alt} title={detail.title?.definition ?? detail.image.title}/*className="bigger-icon"*//>
+                                                <img className="detail-image zoom" src={detail.image.src} alt={detail.image.alt} title={detail.title?.definition ?? detail.image.title}/>
                                             </picture> 
                                             {detail.image.caption && 
                                                 <figcaption className={getDetailFigureCaptionStyleClass(sectionIndex)}> 

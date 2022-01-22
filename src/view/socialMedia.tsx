@@ -1,4 +1,4 @@
-import '../style/socialMedia.css';
+import '../style/socialMedia.scss';
 import PersonalURLs from '../interface/personalUrls';
 import ExternalNavigationProps from '../type/externalNavigationProps';
 import { connect, ComponentConstructor }  from '../model/view/context';

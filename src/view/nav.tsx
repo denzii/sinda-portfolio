@@ -1,8 +1,8 @@
 import { connect, ComponentConstructor }  from '../model/view/context';
 import Context from '../type/context';
 import _ from '../model/view/keyableFragment';
-import { CgMenuRound as MobileMenuOpenedIcon } from "react-icons/cg";
-import { CgCloseO as MobileMenuClosedIcon } from "react-icons/cg";
+import { IoMenuOutline as MobileMenuOpenedIcon } from "react-icons/io5";
+import { BsX as MobileMenuClosedIcon } from "react-icons/bs";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 

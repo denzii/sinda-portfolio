@@ -1,7 +1,7 @@
-import "../style/app.css"
-import '../style/header.css';
-import "../style/hero.css"
-import "../style/footer.css"
+import "../style/app.scss"
+import '../style/header.scss';
+import "../style/hero.scss"
+import "../style/footer.scss"
 import Nav from './nav';
 import SocialMedia from './socialMedia';
 import PersonalBackground from './personalBackground';
