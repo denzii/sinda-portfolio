@@ -1,4 +1,4 @@
-// import '../style/social.css';
+import '../style/socialMedia.css';
 import PersonalURLs from '../interface/personalUrls';
 import ExternalNavigationProps from '../type/externalNavigationProps';
 import { connect, ComponentConstructor }  from '../model/view/context';
@@ -15,10 +15,9 @@ const Data: ContextReducer = (context: AppContext) => ({
 
 const SocialMedia: (props: SocialMediaSectionProps) => JSX.Element  = (props) => <>
     {Object.entries(props.urls).map(([targetPlatformName, navigationProps]: [string, ExternalNavigationProps]) => <_ key={targetPlatformName}>
-        <address /* className="fa-container" */>
-                <a tabIndex={0} href={getTargetPlatformHref(targetPlatformName, navigationProps.url)} title={`My ${Util.Capitalize(targetPlatformName)}`} aria-label={`My ${targetPlatformName} URL`} 
-                className='fa' > 
-                    <navigationProps.icon/> 
+        <address className="external-address" >
+                <a tabIndex={0} href={getTargetPlatformHref(targetPlatformName, navigationProps.url)} title={`My ${Util.Capitalize(targetPlatformName)}`} aria-label={`My ${targetPlatformName} URL`} > 
+                    <navigationProps.icon className="navicon"/> 
                 </a>
         </address>
     </_>)}

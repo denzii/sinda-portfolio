@@ -14,7 +14,7 @@ export enum TextFormat {
     Superscript = "sup"
 }
 
-export type DetailTitle = { text: string, definition: string }
+export type DetailTitle = { text: string, definition?: string }
 export type TextProps = { text: string, format?: TextFormat, unstyled?: boolean }
 
 export default class Detail implements IPlainOldObject {

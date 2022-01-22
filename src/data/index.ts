@@ -25,8 +25,8 @@ export default class Data {
 
     public static PersonalBrand: () => Brand = () => ({
         urls: Data.PersonalUrls(),
-        background: {alt:"Background image portraying an abandoned Orthodox church in Famagusta, Northern Cyprus", imageStyleClass: "background-image-kilise", src: require("../assets/kilise.webp")},
-        headshot: { alt: "Deniz Arca's professional Headshot from the year 2017", caption: "Deniz Arca", src: require("../assets/deniz.webp"), title:"Deniz Arca, 2017"},
+        background: {alt:"Background image portraying an abandoned church in Famagusta, Northern Cyprus", imageStyleClass: "background-image-kilise", src: require("../assets/kilise.webp"), title: "Abandoned church, Famagusta Cyprus"},
+        headshot: { alt: "Deniz Arca's professional Headshot from the year 2017", caption: undefined, src: require("../assets/deniz.webp"), title:"Deniz Arca, 2017"},
     });
 
     private static WorkExperience: () => Detail[] = () => [
@@ -51,15 +51,15 @@ export default class Data {
             [
                 { text: "Worked as a" },
                 { text: "Full Stack Developer", format: TextFormat.Emphasized },
-                { text: "on several internal & customer facing domains ranging from" },
+                { text: "on" },
                 { text: "several", format: TextFormat.Emphasized },
-                { text: "internal & customer facing domains ranging from" },
-                { text: "video & live streaming services", format: TextFormat.Italic },
-                { text: "to" },
-                { text: "Financial Technologies.", format: TextFormat.Italic },
+                { text: "internal & customer facing domains especially in" },
+                { text: "financial technologies", format: TextFormat.Italic },
+                { text: "and" },
+                { text: "video / live streaming.", format: TextFormat.Italic },
             ],
             "https://www.mindgeek.com/",
-            { alt: "Unofficial Mindgeek Logo with a brain drawing on black & white", caption: undefined, src: require("../assets/mgholdings.webp"), title: "Mindgeek Logo (Unofficial)" }
+            { alt: "Unofficial Mindgeek Logo with a brain drawing on black & white", caption: undefined, src: require("../assets/mindgeek.webp"), title: "Mindgeek Logo (Unofficial)" }
         ),
     ];
 
@@ -80,7 +80,7 @@ export default class Data {
     
     private static PersonalProjects: () => Detail[] = () => [
         new Detail(
-            {text:  "Web Portfolio", definition:"(Create React App) with HTML5 & CSS3 Grid."}, 
+            {text:  "Web Portfolio", definition:"Create React App with HTML5 & CSS3 Grid."}, 
             "July 2020", 
             [
                 {text:"A simplistic Static Web Portfolio built using ReactJS as a first attempt on learning the framework." }
@@ -136,7 +136,7 @@ export default class Data {
             { alt: "Icon of a robotic arm  holding the world by a thread", caption: "MVP incomplete, coming Soon!", src: require("../assets/sindagal.webp"), title: "Automation Icon" }
         ),
         new Detail(
-            {text: "Sindagal OpenSource Blog", definition: "React Server Side Rendering with Nodejs using Typescript, HTML5 & CSS3 with SEO Optimizations" }, 
+            {text: "Sindagal OpenSource Blog", definition: "React Server Side Rendering with Nodejs using Typescript, HTML5 & Tailwind CSS with SEO Optimizations" }, 
             "N/A",
             [
                 { text: "Public source of truth for everything" },
@@ -150,21 +150,21 @@ export default class Data {
 
     private static RecreationalActivities: () => Detail[] = () => [
         new Detail(
-            {text: "Open Source Development", definition: ""}, 
+            {text: "Open Source Development", definition: undefined}, 
             "",
             [
                 { text:"Automating", format:TextFormat.Emphasized },
-                { text: "my own workload which I found to be useful for as well as myself, " },
+                { text: "my own workload which I found to be useful for myself, as well as" },
                 { text: "others", format:TextFormat.Emphasized },
-                { text: "as well as" },
-                { text: "myself", format:TextFormat.Emphasized},
-                { text: "making them as convenient as possible to use / extend along the way." },
+                { text: "operating under the name" },
+                { text: "\"Sindagal\"", format:TextFormat.Italic},
+                { text: "and making my work as convenient as possible to use / extend." },
             ],
             undefined,
             { alt: "Icon of people emerging from two hands", caption:"", src: require("../assets/opensourcedev.webp") , title: "Care & love icon" }
         ),   
         new Detail(
-            {text: "Meditation", definition: ""},
+            {text: "Meditation", definition: undefined},
             "", 
             [
                 { text:"Nothing is better than a" },
@@ -176,27 +176,27 @@ export default class Data {
         ),
    
         new Detail(
-            { text: "Chinese Language", definition: "" },
+            { text: "Chinese Language", definition: undefined },
             "", 
             [
                 { text:"As that turkish proverb said..." },
                 { text:"One language,"},
-                { text:"one person;", format:TextFormat.Strong },
-                { text:"two languages," },
-                { text:"two persons!", format:TextFormat.Strong }
+                { text:"one person;", format:TextFormat.Italic },
+                { text:"two languages,", format:TextFormat.Italic },
+                { text:"two", format:TextFormat.Strong },
+                { text: "persons!" },
             ], 
             undefined, 
             { alt: "Icon of a pictograph, a pen & a notepad", caption: undefined, src: require("../assets/chinese.webp"), title: "Pictograph Icon" }
         ),
 
         new Detail(
-            { text: "Hiking", definition: "" }, 
+            { text: "Hiking", definition: undefined }, 
             "",
             [
                 { text: "The best aspect of any hike is spending time with" },
                 { text: "quality", format:TextFormat.Strong },
                 { text: "people." },
-
             ],
             undefined,
             { alt: "Icon of Three Triangles representing tents for camping", caption:"", src: require("../assets/tents.webp") , title: "Pitched tents icon" }
