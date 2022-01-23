@@ -1,74 +1,72 @@
-@import "./_mixins";
-@import "./_variables";
+@use "abstracts" as a;
 
-header {
-	position: fixed;
-  	top:0;
-  	z-index: 1;
 
-  	width: 100%;
+.header {
+	@include a.fixedHeaderRules();
+	@include a.centreSpacedFlexContainerRules(flex);
+	background-color: #F8F8F8;
+	width: 100%;
   	padding-bottom: 15px;
-
+	  
   	/*neumorphism effects*/
   	border-radius: 0px 0px 13px 13px;
-  	background: linear-gradient( neumorphDegree(upper-left-lightsource), #ffffff, #e6e6e6);
+  	background: linear-gradient(a.neumorphDegree(upper-left-lightsource), #ffffff, #e6e6e6);
   	box-shadow:  8px 10px 16px #636363, 4px -2px 16px #666666;  
 
-	// @include tabletMediaQuery{
-		 // padding-left: 4vw;
-    	// padding-right: 5vw;
-	// }
-	
-	@include centreSpacedFlexContainerRules(flex);
-
-	h3{
-		a{
-			@include anchorNavigationRules(null, small-caps);
+	&__description {
+		&--hidden {
+			@include a.hiddenRules();
 		}
 	}
 
-  	#desktop-nav {
-    	/* needed so the li elems will have space between them (this requires container to be bigger) */
+	&__nav-logo-text{
+		&__anchor{
+			@include a.anchorNavigationRules(null, small-caps);
+		}
+	}
+
+  	&__desktop-nav {
+		@include a.mobileMediaQuery {
+			display: none;
+		}
+		
+    	// needed so the li elems will have space between them (this requires container to be bigger)
     	width: 575px;
     	height: inherit;
 		
-		@include mobileMediaQuery {
-			display: none;
-		}
-
-		menu {
-			all: unset;
-			height: inherit;
-
-			/* align the inner DOM element containing the list of navigation anchors */
-			@include centreSpacedFlexContainerRules(flex);
+		&__menu {
+			// align the inner DOM element containing the list of navigation anchors
+			@include a.centreSpacedFlexContainerRules(flex);
 			
-			/*for some reason nav menu was misaligned with the h3 on the left, quick and dirty hack*/
+			//for some reason nav menu was misaligned with the h3 on the left, quick and dirty hack
 			padding-top: 2.5px; 
 
-			li {
+			&__element {
 				list-style-type: none;
-			}
-
-			h4 {
-				a {
-					@include anchorNavigationRules(uppercase);
+				&__text {
+					&__anchor {
+						@include a.anchorNavigationRules(uppercase);
+					}
 				}
 			}
-		} 
+		}
   	}
 
-	#mobile-nav {
-		@include centreSpacedFlexContainerRules(none);
+	&__mobile-nav {
+		@include a.centreSpacedFlexContainerRules(none);
 		flex-wrap: nowrap;
 		flex-direction: row-reverse;
 		
-		@include mobileMediaQuery {
+		@include a.mobileMediaQuery {
 			display: flex;
 		}
 
-		#mobile-menu-button {
-			cursor:pointer;
+		&__label{
+			@include a.hiddenRules();
+		}
+
+		&__button {
+			cursor: pointer;
 			font-size: 1.9em;
 			color: black;
 			padding-top: 10px;
@@ -76,45 +74,48 @@ header {
 			background-color: inherit;
 		} 
 
-		menu {
-			width: 10em;
-			height: 100%;
-			
-			/* for mobile viewports, push navbar elements from the center to the sides 
- 			&& change width of mobile menu so it will be indented in
- 			is there a better way to achive it through flexbox without playing with width or media q? */
-			@include mobileMediaQuery {
+		&__menu {
+			// for mobile viewports, push navbar elements from the center to the sides 
+ 			// && change width of mobile menu so it will be indented in
+ 			// is there a better way to achive it through flexbox without playing with width or media q? 
+			@include a.mobileMediaQuery {
 				width: 100%;
 			}
 
-			/* for low end viewports,
- 			change width of mobile menu so it will be displayed properly
- 			is there a better way to achive it through flexbox without playing with width or media q? */
-			@include lowEndMediaQuery {
+			// for low end viewports,
+ 			// change width of mobile menu so it will be displayed properly
+ 			// is there a better way to achive it through flexbox without playing with width or media q? 
+			@include a.lowEndMediaQuery {
 				padding-right: 2em;
 			}
 
-			@include centreSpacedFlexContainerRules(flex);
+			@include a.centreSpacedFlexContainerRules(flex);
 			flex-direction: column;
+
+			width: 10em;
+			height: 100%;
 
 			position:relative;
 			padding-right: 8em;
 
-			li {
+			&__element {
 				text-align: center;
 				height: 2.5em;
 				list-style-type: none;
-			}
 
-			h4{
-				a{
-					@include anchorNavigationRules(uppercase);
+				&__text{
+					&__anchor{
+						@include a.anchorNavigationRules(uppercase);
+					}
 				}
 			}
 		}
 	}
 }
 
+
+
+// media queries before scss///////
 
 /* for tablet-ish viewports, push navbar elements from the center to the sides */
 // @media only screen and (max-width: 1280px){

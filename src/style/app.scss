@@ -1,7 +1,7 @@
-@import "./_mixins";
-@import "./_variables";
+@use "abstracts" as a;
 
-/* styles pertaing to accessibility and cross browser design*/
+/* styles pertaing to accessibility and cross browser design */
+/* no BEM for these */
 
 /*  for removing default styles from html tags which have them,
     eg: <em></em> is used for emphasis, this may be useful for screen readers
@@ -13,7 +13,7 @@
 	* {
     	all: unset;
   	}
-	
+
 	#root {
 		position: relative;
 		z-index: -1;
@@ -30,12 +30,12 @@ hr {
   	max-width: 100%;
 }
 
-/* clear browser defaults for nav element */
-nav { margin: 0; }
-menu { all: unset; }
+/* clear browser defaults, set height to be inherited from parent by default */
+nav { margin: 0; height: inherit; }
+menu { all: unset; height: inherit; }
 
 /* Disable default Definition List styles applied by the browsers so each inner element could be styled properly later on */
-dl, dl h3, dt, dd {	@include boxModelResetRules(); }
+dl, dl h3, dt, dd {	@include a.boxModelResetRules(); }
 
 /* for including descriptive tags and having them not interfere with visual design. this gives readability to the markup as well as the code generating it
    improving maintainability */
@@ -63,20 +63,24 @@ p { font-size: 1.05em; }
 /* all these tags should have the same font and same style of text globally unless a rule is specified again later on*/
 h1, h2, h3, h4,
 p, a, fieldset {
-  	font-family: $global-fonts;
-  	color: $global-font-colour;
+  	font-family: a.$global-fonts;
+  	color: a.$global-font-colour;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
 
 /* pimp my scrollbar on chrome */
-body::-webkit-scrollbar { width: scrollbar(webkit-thin) }
-body::-webkit-scrollbar-track { background: scrollbar(background-colour); }
-body::-webkit-scrollbar-thumb { background: scrollbar(colour); }
+body::-webkit-scrollbar { width: a.scrollbar(webkit-thin); }
+body::-webkit-scrollbar-track { background: a.scrollbar(background-colour); }
+body::-webkit-scrollbar-thumb { background: a.scrollbar(colour); }
 
 
 /* pimp my scrollbar on firefox */
 * {
-	scrollbar-color: scrollbar(colour) scrollbar(background-colour);
-	scrollbar-width: scrollbar(moz-thin);
+	scrollbar-color: a.scrollbar(colour) a.scrollbar(background-colour);
+	scrollbar-width: a.scrollbar(moz-thin);
 }
+
+
+// clear browser defaults for indentation for the data definition tag 
+dd { all: unset;  }

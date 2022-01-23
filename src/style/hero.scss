@@ -1,16 +1,19 @@
-@import "./_mixins";
-@import "./_variables";
+@use "abstracts" as a;
 
-#hero {
-	@include heroSectionBackgroundImageRules();
-
+.hero {
+	@include a.heroSectionBackgroundImageRules();
   	display: flex;
   	flex-wrap: nowrap;
 
-  	#foreground {
-		@include heroSectionForegroundImageRules();
+	&__description{
+		&--hidden{
+			@include a.hiddenRules();
+		}
+	}
+  	&__foreground-image {
+		@include a.heroSectionForegroundImageRules();
     	border:0.125em solid #fff;
-    	background: linear-gradient(neumorphDegree(upper-left-lightsource), #2a2a2a, #323232);
+    	background: linear-gradient(a.neumorphDegree(upper-left-lightsource), #2a2a2a, #323232);
     	box-shadow:  8px 20px 15px #242424, 4px -5px 10px #666666;
   	}
 }

@@ -1,150 +1,136 @@
-@import "./_mixins";
-@import "./_variables";
+@use "abstracts" as a;
 
-/* clear browser defaults for indentation for the data definition tag */
-dd { all: unset; max-width: 420px; }
-
-dl {
-    min-height: 660px;
-    position: relative;
-}
-
-dl{
-    box-shadow:  2px -2px 15px #2f2f2f,
-    -2px 5px 15px #2f2f2f inset;
-    scroll-margin-top: 6em;
-}
-
-.data-group {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    flex-wrap: wrap;
-
-    padding-top: 6em;
-
-    * {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-
-#personal-background {
+.personal-background {
     position: relative;
     z-index: 0;
 
-    .section {
+    &__description{
+        &--hidden{
+            @include a.hiddenRules();
+        }
+    }
+    &__section {
         position: relative;
         padding: 25px;
+        box-shadow:  2px -2px 15px #2f2f2f,
+        -2px 5px 15px #2f2f2f inset;
+        scroll-margin-top: 6em;
+        min-height: 660px;
+        position: relative;
 
-        h3 {
-            letter-spacing: 0.05em;
-            margin: 10px;
-            font-weight: 600;
-            text-align: center;
-            margin-top:40px;
+        &--light-background{
+            @include a.lightBackgroundRules();
+        }
+
+        &--dark-background{
+            @include a.darkBackgroundRules();
         }
         
-        fieldset {
-            border: 0;
-            padding-top: 10px;
-            text-align: center;
-            max-width: 320px;
-
-            figure {
-                margin: 1em;
-                height: 200px;
-            }
-    
-            figcaption {
-                padding: 5px;
-                max-width: 250px;
-                border-radius: 10%;
-                margin: auto;
-                top: -35.5px;
-                position: relative;
-            }
-            
-            summary + p {
-                margin-top: 0;
+        &__data-tag {
+            &__text{
+                letter-spacing: 0.05em;
+                margin: 10px;
                 font-weight: 600;
+                text-align: center;
+                margin-top:40px;
             }
-
-            summary {
-                font-size: 1.20em;
-                font-weight: 600;
-               
-                p {
-                    padding-top: 5px;
-                    font-weight: 600;
-                }
-            }
-
         }
-
-        /* image container cannot be avoided, needed to display the image captions correctly */
-        .image-container {
-            .detail-image {
-                border-radius: 42.5%;
-                background-color: ivory;
-                max-width: 200px;
-                z-index: 3;
-                box-shadow:  0px 1px 6px #2f2f2f,
-                0px 2px 16px #2f2f2f;
+        
+        &__data-group {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
     
-                &:hover {
-                    box-shadow:  0px 1px 25px #C3AF8F, 0px 2px 25px #544739;
+            padding-top: 6em;
+        
+            & * {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            &__data-definition {
+                max-width: 420px;
+
+                &__fieldset {
+                    border: 0;
+                    padding-top: 10px;
+                    text-align: center;
+                    max-width: 320px;
+                    &__address{
+                        &__anchor{
+                            &__figure{
+                                margin: 1em;
+                                height: 200px;
+
+                                // picture tag (__picture class) is a container and cannot be avoided, its needed to create a logical grouping and to
+                                // display the image captions correctly 
+                                &__picture {
+                                    &__image {
+                                        border-radius: 42.5%;
+                                        background-color: ivory;
+                                        max-width: 200px;
+                                        z-index: 3;
+                                        box-shadow:  0px 1px 6px #2f2f2f,
+                                        0px 2px 16px #2f2f2f;
+                            
+                                        &:hover {
+                                            box-shadow:  0px 1px 25px #C3AF8F, 0px 2px 25px #544739;
+                                        }
+                                        &--zoom {
+                                            @include a.zoomEffectRules();
+                                        }
+                                        // personal-background__section__data-group__data-definition__fieldset__address__anchor__figure__picture__image
+                                        // personal-background__section__data-definition__fieldset__address__anchor__figure__picture__image--zoom
+                                    }
+                                }
+                            }
+
+                            &__figure-caption{
+                                padding: 5px;
+                                max-width: 250px;
+                                border-radius: 10%;
+                                margin: auto;
+                                top: -35.5px;
+                                position: relative;
+
+                                &--light-text{
+                                    @include a.lightTextRules();
+                                }
+
+                                &--light-overlay{
+                                    @include a.lightOverlayRules();
+                                }
+
+                                &--dark-text{
+                                    @include a.darkTextRules();
+                                }
+
+                                &--dark-overlay{
+                                    @include a.darkOverlayRules();
+                                }
+                            }
+                        }
+                    }
+                    
+                    &__details{
+                        &__summary{
+                            font-size: 1.20em;
+                            font-weight: 600;
+
+                            // remove margin between chronology and data tag heading ONLY
+                            & + p {
+                                margin-top: 0;
+                            }
+                        }
+
+                        &__description, &__chronology {
+                            padding-top: 5px;
+                            font-weight: 600;
+                        }
+                    }
                 }
             }
         } 
-    }
-}
-
-
-.dark-background {
-    background-color: #474e5d;
-
-    * {
-        color: #ffffff;
-    
-    }
-}
-
-.light-background {
-    background-color: #ffffff;
-
-    a {
-        text-decoration: none;
-    }
-}
-
-
-.dark-text {
-    color: #020202;
-}
-
-.light-text{
-    color: #fff;
-}
-
-.light-overlay {
-    background-color: rgba(240, 240, 240, 0.96);
-
-    * {
-        color: #020202
-    }  
-}
-
-.dark-overlay {
-    background-color: rgba(0, 0, 0, 0.75);
-}
-
-
-.zoom {
-    transition: transform .2s;
-    
-    &:hover {
-        transform: scale(1.2);
     }
 }

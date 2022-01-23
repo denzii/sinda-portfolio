@@ -15,9 +15,9 @@ const Data: ContextReducer = (context: AppContext) => ({
 
 const SocialMedia: (props: SocialMediaSectionProps) => JSX.Element  = (props) => <>
     {Object.entries(props.urls).map(([targetPlatformName, navigationProps]: [string, ExternalNavigationProps]) => <_ key={targetPlatformName}>
-        <address className="external-address" >
-                <a tabIndex={0} href={getTargetPlatformHref(targetPlatformName, navigationProps.url)} title={`My ${Util.Capitalize(targetPlatformName)}`} aria-label={`My ${targetPlatformName} URL`} > 
-                    <navigationProps.icon className="navicon"/> 
+        <address className="social-media__external-address" >
+                <a className='social-media__external-address__anchor' href={getTargetPlatformHref(targetPlatformName, navigationProps.url)} title={`My ${Util.Capitalize(targetPlatformName)}`} aria-label={`My ${targetPlatformName} URL`} > 
+                    <navigationProps.icon className="social-media__external-address__anchor__icon social-media__external-address__anchor__icon--white"/> 
                 </a>
         </address>
     </_>)}
