@@ -71,7 +71,6 @@ const getDetailFigureCaptionCssModifier: (sectionIndex: number) => string = (sec
     : "personal-background__section__data-group__data-definition__fieldset__address__anchor__figure-caption--light-overlay personal-background__section__data-group__data-definition__fieldset__address__anchor__figure-caption--dark-text";
 const getSectionCssModifier: (sectionIndex: number) => string = (sectionIndex) => sectionIndex % 2 === 0 ? "personal-background__section--light-background" : "personal-background__section--dark-background";
 
-
 const WithContextConsumer: ComponentConstructor = connect(Data);
 export default WithContextConsumer(PersonalBackground);
 
