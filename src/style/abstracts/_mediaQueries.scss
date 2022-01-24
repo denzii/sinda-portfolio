@@ -1,5 +1,11 @@
 @use "variables" as v;
 
+@mixin desktopMediaQuery {
+    @media only screen and (max-width: #{v.$desktopBreakpoint}) {
+        @content
+    }
+};
+
 @mixin tabletMediaQuery {
     @media only screen and (max-width: #{v.$tabletBreakpoint}) {
         @content

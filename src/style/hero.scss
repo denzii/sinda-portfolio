@@ -17,8 +17,7 @@
     	box-shadow:  8px 20px 15px #242424, 4px -5px 10px #666666;
 
 		@include a.mobileMediaQuery{
-			margin-left: 1.75em;
-			margin-right: 1.75em;
+			max-width: 19.5em;
 		}
   	}
 }
