@@ -14,7 +14,7 @@
         padding: 25px;
         box-shadow:  2px -2px 15px #2f2f2f,
         -2px 5px 15px #2f2f2f inset;
-        scroll-margin-top: 6em;
+        scroll-margin-top: 4.75em;
         min-height: 660px;
         position: relative;
 
@@ -40,7 +40,7 @@
             text-align: center;
             flex-wrap: wrap;
     
-            padding-top: 6em;
+            padding-top: 3em;
         
              * {
                 margin-left: auto;
@@ -58,7 +58,7 @@
 
                     .anchor__figure{
                         margin: 1em;
-                        height: 200px;
+                        // height: 200px;
 
                         .picture__image {
                             border-radius: 42.5%;
@@ -74,8 +74,10 @@
                             &--zoom {
                                 @include a.zoomEffectRules();
                             }
-                            // personal-background__section__data-group__data-definition__fieldset__address__anchor__figure__picture__image
-                            // personal-background__section__data-definition__fieldset__address__anchor__figure__picture__image--zoom
+                            
+                            @include a.mobileMediaQuery{
+                                max-width: 175px;
+                            }
                         }
                     }
 
