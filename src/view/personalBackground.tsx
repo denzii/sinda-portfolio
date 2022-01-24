@@ -25,12 +25,11 @@ const PersonalBackground: (props: PersonalBackgroundProps) => JSX.Element  = (pr
                     <dd className="data-group__data-definition" role="definition">
                         <HTMLTag as={getDetailTag(sectionName)} role="listitem">
                             <fieldset className="data-definition__fieldset">
-                                <address role="link">
-                                    <a href={detail.url ?? `#${sectionName}`} target={detail.url ? "_blank" : "_self"} rel="noopener noreferrer"> 
+                                <address tabIndex={0}  role="link">
+                                    <a tabIndex={-1} href={detail.url ?? `#${sectionName}`} target={detail.url ? "_blank" : "_self"} rel="noopener noreferrer"> 
                                         <figure className="anchor__figure">
                                             <picture>
-                                                <img className="picture__image picture__image--zoom"
-                                                     src={detail.image.src} alt={detail.image.alt} title={detail.title?.definition ?? detail.image.title}/>
+                                                <img className="picture__image picture__image--zoom" src={detail.image.src} alt={detail.image.alt} title={detail.title?.definition ?? detail.image.title}/>
                                             </picture> 
                                             {detail.image.caption && 
                                                 <figcaption className={`anchor__figure-caption ${getDetailFigureCaptionCssModifier(sectionIndex)}`}> 
