@@ -12,8 +12,13 @@
 	}
   	&__foreground-image {
 		@include a.heroSectionForegroundImageRules();
-    	border:0.125em solid #fff;
+    	border: 0.125em solid #fff;
     	background: linear-gradient(a.neumorphDegree(upper-left-lightsource), #2a2a2a, #323232);
     	box-shadow:  8px 20px 15px #242424, 4px -5px 10px #666666;
+
+		@include a.mobileMediaQuery{
+			margin-left: 1.75em;
+			margin-right: 1.75em;
+		}
   	}
 }
