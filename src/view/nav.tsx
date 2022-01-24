@@ -23,39 +23,40 @@ const Nav: (props: HeaderNavProps) => JSX.Element = (props) => {
     const onAnchorNavigation: () => void = () => setMobileMenuState(false);
     
     const MobileMenuButton: () => JSX.Element = isMobileMenuOpen ? () => <>
-            <button className="header__mobile-nav__button" id="header__mobile-nav__button" autoFocus onClick={() => setMobileMenuState(!isMobileMenuOpen)} onKeyPress={onEnterKey} aria-expanded={isMobileMenuOpen}>
+            <button className="mobile-nav__button" id="mobile-nav__button" autoFocus onClick={() => setMobileMenuState(!isMobileMenuOpen)} onKeyPress={onEnterKey} aria-expanded={isMobileMenuOpen}>
                 <MobileMenuClosedIcon/>
             </button>
         </> : () => <>
-            <button className="header__mobile-nav__button" id="header__mobile-nav__button" autoFocus onClick={() => setMobileMenuState(!isMobileMenuOpen)} onKeyPress={onEnterKey} aria-expanded={isMobileMenuOpen}>
+            <button className="mobile-nav__button" id="mobile-nav__button" autoFocus onClick={() => setMobileMenuState(!isMobileMenuOpen)} onKeyPress={onEnterKey} aria-expanded={isMobileMenuOpen}>
                 <MobileMenuOpenedIcon/>
             </button>
         </>;
     
     return <>
-        <h3 className="header__nav-logo-text">
-            <a href="/#" className="header__nav-logo-text__anchor" title='Scroll to Top'>{ props.logoText }</a></h3>
+        <h3 >
+            <a href="/#" className="nav-logo-text__anchor" title='Scroll to Top'>{ props.logoText }</a>
+        </h3>
         <nav className="header__desktop-nav">
-            <menu className="header__desktop-nav__menu">
-                {props.navigationLinks.map(sectionKey => <_ key={`element-${sectionKey}`}>
-                    <li className="header__desktop-nav__menu__element">
-                        <h4 className="header__desktop-nav__menu__element__text"> 
-                            <a className="header__desktop-nav__menu__element__text__anchor" href={ `/#${sectionKey}`} title={`Scroll to ${sectionKey} section`}>{sectionKey}</a>
+            <menu className="desktop-nav__menu">
+                {props.navigationLinks.map(sectionKey => <_ key={`menu__element-${sectionKey}`}>
+                    <li className="menu__element">
+                        <h4> 
+                            <a className="text__anchor" href={ `/#${sectionKey}`} title={`Scroll to ${sectionKey} section`}>{sectionKey}</a>
                         </h4>
                     </li>
                 </_>)}
             </menu>
         </nav>
         <nav className="header__mobile-nav" aria-labelledby="header__mobile-nav__label">
-            <label htmlFor="header__mobile-nav__button" id="header__mobile-nav__label" aria-label="Mobile Navigation Menu Toggle" className="header__mobile-nav__label">
+            <label className="mobile-nav__label" htmlFor="mobile-nav__button" id="mobile-nav__label" aria-label="Mobile Navigation Menu Toggle" >
                 Navigation Menu toggle used for mobile size screen resolutions
             </label>
             <MobileMenuButton />
-            <menu className='header__mobile-nav__menu'>
+            <menu className='mobile-nav__menu'>
                 {isMobileMenuOpen && props.navigationLinks.map(sectionKey => <_ key={`mobile-${sectionKey}`}>
-                    <motion.li className="header__mobile-nav__menu__element" onClick={onAnchorNavigation} initial={{ opacity: 0, y: -40 }} animate={{ opacity: 1, y: 0 }} transition={{delay: 0.04}}>
-                        <h4 className="header__mobile-nav__menu__element__text">
-                            <a className="header__mobile-nav__menu__element__text__anchor" href={ `/#${sectionKey}`} title={`Scroll to ${sectionKey} section`}> {sectionKey}</a>
+                    <motion.li className="menu__element" onClick={onAnchorNavigation} initial={{ opacity: 0, y: -40 }} animate={{ opacity: 1, y: 0 }} transition={{delay: 0.04}}>
+                        <h4>
+                            <a className="text__anchor" href={ `/#${sectionKey}`} title={`Scroll to ${sectionKey} section`}> {sectionKey}</a>
                         </h4>
                     </motion.li>
                 </_>)}

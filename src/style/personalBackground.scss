@@ -26,17 +26,15 @@
             @include a.darkBackgroundRules();
         }
         
-        &__data-tag {
-            &__text{
-                letter-spacing: 0.05em;
-                margin: 10px;
-                font-weight: 600;
-                text-align: center;
-                margin-top:40px;
-            }
+        .data-tag__text{
+            letter-spacing: 0.05em;
+            margin: 10px;
+            font-weight: 600;
+            text-align: center;
+            margin-top:40px;
         }
         
-        &__data-group {
+        .section__data-group {
             display: flex;
             justify-content: space-around;
             text-align: center;
@@ -44,93 +42,84 @@
     
             padding-top: 6em;
         
-            & * {
+             * {
                 margin-left: auto;
                 margin-right: auto;
             }
 
-            &__data-definition {
+            .data-group__data-definition {
                 max-width: 420px;
 
-                &__fieldset {
+                .data-definition__fieldset {
                     border: 0;
                     padding-top: 10px;
                     text-align: center;
                     max-width: 320px;
-                    &__address{
-                        &__anchor{
-                            &__figure{
-                                margin: 1em;
-                                height: 200px;
 
-                                // picture tag (__picture class) is a container and cannot be avoided, its needed to create a logical grouping and to
-                                // display the image captions correctly 
-                                &__picture {
-                                    &__image {
-                                        border-radius: 42.5%;
-                                        background-color: ivory;
-                                        max-width: 200px;
-                                        z-index: 3;
-                                        box-shadow:  0px 1px 6px #2f2f2f,
-                                        0px 2px 16px #2f2f2f;
-                            
-                                        &:hover {
-                                            box-shadow:  0px 1px 25px #C3AF8F, 0px 2px 25px #544739;
-                                        }
-                                        &--zoom {
-                                            @include a.zoomEffectRules();
-                                        }
-                                        // personal-background__section__data-group__data-definition__fieldset__address__anchor__figure__picture__image
-                                        // personal-background__section__data-definition__fieldset__address__anchor__figure__picture__image--zoom
-                                    }
-                                }
+                    .anchor__figure{
+                        margin: 1em;
+                        height: 200px;
+
+                        .picture__image {
+                            border-radius: 42.5%;
+                            background-color: ivory;
+                            max-width: 200px;
+                            z-index: 3;
+                            box-shadow:  0px 1px 6px #2f2f2f,
+                            0px 2px 16px #2f2f2f;
+                
+                            &:hover {
+                                box-shadow:  0px 1px 25px #C3AF8F, 0px 2px 25px #544739;
                             }
-
-                            &__figure-caption{
-                                padding: 5px;
-                                max-width: 250px;
-                                border-radius: 10%;
-                                margin: auto;
-                                top: -35.5px;
-                                position: relative;
-
-                                &--light-text{
-                                    @include a.lightTextRules();
-                                }
-
-                                &--light-overlay{
-                                    @include a.lightOverlayRules();
-                                }
-
-                                &--dark-text{
-                                    @include a.darkTextRules();
-                                }
-
-                                &--dark-overlay{
-                                    @include a.darkOverlayRules();
-                                }
+                            &--zoom {
+                                @include a.zoomEffectRules();
                             }
+                            // personal-background__section__data-group__data-definition__fieldset__address__anchor__figure__picture__image
+                            // personal-background__section__data-definition__fieldset__address__anchor__figure__picture__image--zoom
                         }
                     }
-                    
-                    &__details{
-                        &__summary{
-                            font-size: 1.20em;
-                            font-weight: 600;
 
-                            // remove margin between chronology and data tag heading ONLY
-                            & + p {
-                                margin-top: 0;
-                            }
+                    .anchor__figure-caption{
+                        padding: 5px;
+                        max-width: 250px;
+                        border-radius: 10%;
+                        margin: auto;
+                        top: -35.5px;
+                        position: relative;
+
+                        &--light-text{
+                            @include a.lightTextRules();
                         }
 
-                        &__description, &__chronology {
-                            padding-top: 5px;
-                            font-weight: 600;
+                        &--light-overlay{
+                            @include a.lightOverlayRules();
                         }
+
+                        &--dark-text{
+                            @include a.darkTextRules();
+                        }
+
+                        &--dark-overlay{
+                            @include a.darkOverlayRules();
+                        }
+                    }
+                        
+                    .details__summary{
+                        font-size: 1.20em;
+                        font-weight: 600;
+
+                        // remove margin between chronology and data tag heading ONLY
+                        & + p {
+                            margin-top: 0;
+                        }
+                    }
+
+                    .details__description, .details__chronology {
+                        padding-top: 5px;
+                        font-weight: 600;
                     }
                 }
             }
-        } 
-    }
+        }
+    } 
 }

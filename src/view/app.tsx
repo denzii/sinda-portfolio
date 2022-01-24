@@ -43,8 +43,7 @@ const App: (props: AppProps) => JSX.Element = (props) =>  <>
 export default App;
 
 /**
- * @todo refactor BEM classnames to be more modular and move away from the hierarchical approach.
- * 		This entails having only the immediate parent as the Block and ignoring the outer ones so the code won't get too verbose 
+ * @todo ✓ refactor BEM classnames to be more modular and move away from the hierarchical approach.
  * @todo investigate the invisible onFocus outline in Chrome 
  * @todo open social media links in a new tab instead of closing the site when clicked on
  * @todo make the professional headshot image a touch smaller for mobile

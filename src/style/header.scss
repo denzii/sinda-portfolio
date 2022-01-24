@@ -19,10 +19,8 @@
 		}
 	}
 
-	&__nav-logo-text{
-		&__anchor{
-			@include a.anchorNavigationRules(null, small-caps);
-		}
+	.nav-logo-text__anchor{
+		@include a.anchorNavigationRules(null, small-caps);
 	}
 
   	&__desktop-nav {
@@ -34,19 +32,17 @@
     	width: 575px;
     	height: inherit;
 		
-		&__menu {
+		.desktop-nav__menu {
 			// align the inner DOM element containing the list of navigation anchors
 			@include a.centreSpacedFlexContainerRules(flex);
 			
 			//for some reason nav menu was misaligned with the h3 on the left, quick and dirty hack
 			padding-top: 2.5px; 
 
-			&__element {
+			.menu__element {
 				list-style-type: none;
-				&__text {
-					&__anchor {
-						@include a.anchorNavigationRules(uppercase);
-					}
+				.text__anchor {
+					@include a.anchorNavigationRules(uppercase);
 				}
 			}
 		}
@@ -61,11 +57,11 @@
 			display: flex;
 		}
 
-		&__label{
+		.mobile-nav__label{
 			@include a.hiddenRules();
 		}
 
-		&__button {
+		.mobile-nav__button {
 			cursor: pointer;
 			font-size: 1.9em;
 			color: black;
@@ -74,7 +70,7 @@
 			background-color: inherit;
 		} 
 
-		&__menu {
+		.mobile-nav__menu {
 			// for mobile viewports, push navbar elements from the center to the sides 
  			// && change width of mobile menu so it will be indented in
  			// is there a better way to achive it through flexbox without playing with width or media q? 
@@ -98,15 +94,13 @@
 			position:relative;
 			padding-right: 8em;
 
-			&__element {
+			.menu__element {
 				text-align: center;
 				height: 2.5em;
 				list-style-type: none;
 
-				&__text{
-					&__anchor{
-						@include a.anchorNavigationRules(uppercase);
-					}
+				.text__anchor{
+					@include a.anchorNavigationRules(uppercase);
 				}
 			}
 		}

@@ -19,24 +19,21 @@ const Data: ContextReducer = (context: AppContext) => ({
 const PersonalBackground: (props: PersonalBackgroundProps) => JSX.Element  = (props) => <>
     {Object.entries(props.background).map(([sectionName, sectionDetails]: [string, Detail[]], sectionIndex) => <_ key={sectionName}>
         <dl className={`personal-background__section ${getSectionCssModifier(sectionIndex)}`} id={sectionName}>
-            <dt className="personal-background__section__data-tag">
-                <h3 className="personal-background__section__data-tag__text">{sectionName.toUpperCase()}</h3>
-            </dt>
-            <section className='personal-background__section__data-group'>
+            <dt><h3 className="data-tag__text">{sectionName.toUpperCase()}</h3></dt>
+            <section className='section__data-group'>
                 {sectionDetails.map((detail: Detail) => <_ key={`${sectionName}${detail.title?.text ?? ""}`}>
-                    <dd className="personal-background__section__data-group__data-definition" role="definition">
+                    <dd className="data-group__data-definition" role="definition">
                         <HTMLTag as={getDetailTag(sectionName)} role="listitem">
-                            <fieldset className="personal-background__section__data-group__data-definition__fieldset">
-                                <address className="personal-background__section__data-group__data-definition__fieldset__address" role="link">
-                                    <a className="personal-background__section__data-group__data-definition__fieldset__address__anchor" href={detail.url ?? `#${sectionName}`} target={detail.url ? "_blank" : "_self"} 
-                                        rel="noopener noreferrer"> 
-                                        <figure className="personal-background__section__data-group__data-definition__fieldset__address__anchor__figure">
-                                            <picture className="personal-background__section__data-group__data-definition__fieldset__address__anchor__figure__picture">
-                                                <img className="personal-background__section__data-group__data-definition__fieldset__address__anchor__figure__picture__image personal-background__section__data-group__data-definition__fieldset__address__anchor__figure__picture__image--zoom"
+                            <fieldset className="data-definition__fieldset">
+                                <address role="link">
+                                    <a href={detail.url ?? `#${sectionName}`} target={detail.url ? "_blank" : "_self"} rel="noopener noreferrer"> 
+                                        <figure className="anchor__figure">
+                                            <picture>
+                                                <img className="picture__image picture__image--zoom"
                                                      src={detail.image.src} alt={detail.image.alt} title={detail.title?.definition ?? detail.image.title}/>
                                             </picture> 
                                             {detail.image.caption && 
-                                                <figcaption className={`personal-background__section__data-group__data-definition__fieldset__address__anchor__figure-caption ${getDetailFigureCaptionCssModifier(sectionIndex)}`}> 
+                                                <figcaption className={`anchor__figure-caption ${getDetailFigureCaptionCssModifier(sectionIndex)}`}> 
                                                     <strong>{detail.image.caption}</strong>
                                                 </figcaption>
                                             }
@@ -44,15 +41,15 @@ const PersonalBackground: (props: PersonalBackgroundProps) => JSX.Element  = (pr
                                     </a>
                                 </address>
                                 {detail.title && <>
-                                    <details className='personal-background__section__data-group__data-definition__fieldset__details' open={true}>
-                                        <summary className='personal-background__section__data-group__data-definition__fieldset__details__summary' tabIndex={0}>
+                                    <details open={true}>
+                                        <summary className='details__summary' tabIndex={0}>
                                             <dfn title={detail.title.definition}>{detail.title.text}</dfn> 
                                         </summary>
-                                        <p className='personal-background__section__data-group__data-definition__fieldset__details__chronology'>
+                                        <p className='details__chronology'>
                                             <dfn title={`${detail.title.text} ${Util.Capitalize(sectionName)} date`}>{detail.dateRange}</dfn>
                                         </p>
-                                        <p className='personal-background__section__data-group__data-definition__fieldset__details__description'>
-                                            <Text description={detail.description} cssClass={"personal-background__section__data-definition__fieldset__details__description__text"}/>
+                                        <p className='details__description'>
+                                            <Text description={detail.description} cssClass={"description__text"}/>
                                         </p>
                                     </details>
                                 </>}
@@ -67,8 +64,8 @@ const PersonalBackground: (props: PersonalBackgroundProps) => JSX.Element  = (pr
 
 const getDetailTag: (sectionKey: string) => ElementType = (sectionKey) => (["resume", "hobbies"].includes(sectionKey) ? "aside" : "article");
 const getDetailFigureCaptionCssModifier: (sectionIndex: number) => string = (sectionIndex) => sectionIndex % 2 === 0 
-    ? "personal-background__section__data-group__data-definition__fieldset__address__anchor__figure-caption--dark-overlay personal-background__section__data-group__data-definition__fieldset__address__anchor__figure-caption--light-text" 
-    : "personal-background__section__data-group__data-definition__fieldset__address__anchor__figure-caption--light-overlay personal-background__section__data-group__data-definition__fieldset__address__anchor__figure-caption--dark-text";
+    ? "anchor__figure-caption--dark-overlay anchor__figure-caption--light-text" 
+    : "anchor__figure-caption--light-overlay anchor__figure-caption--dark-text";
 const getSectionCssModifier: (sectionIndex: number) => string = (sectionIndex) => sectionIndex % 2 === 0 ? "personal-background__section--light-background" : "personal-background__section--dark-background";
 
 const WithContextConsumer: ComponentConstructor = connect(Data);
