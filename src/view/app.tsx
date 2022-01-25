@@ -47,11 +47,12 @@ export default App;
  * @todo ✓ investigate the invisible onFocus outline in Chrome 
  * @todo ✓ open social media links in a new tab instead of closing the site when clicked on
  * @todo ✓ make the professional headshot image a touch smaller for mobile
- * @todo decrease neumorph intensity on mobile and partially on desktop
- * @todo include an optional "technologies used" text with a different font formatting underneath the images above the actual description
- * @todo add ease scroll effect when pressed on navigation section 
+ * @todo ✓ decrease neumorph intensity on mobile and partially on desktop
  * @todo make the highlight and zoom effects optional, remove them from elements without links (hobbies)
- * @todo add a  comprehensive readme
+ * @todo investigate how to get the top and bottom empty spaces in the sections to be equal with flexbox
+ * @todo add ease scroll effect when pressed on navigation section 
+ * @todo include an optional "technologies used" text with a different font formatting underneath the images above the actual description
  * @todo proof read all content 
+ * @todo add a comprehensive readme
  * @todo forget about additional improvements apart from the above and move onto something else for a while
 */

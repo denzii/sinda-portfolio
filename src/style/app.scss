@@ -7,18 +7,7 @@
     eg: <em></em> is used for emphasis, this may be useful for screen readers
     but we may not want the emphasized element to be displayed in italics 
     in these scenarios the below selectors are useful */
-.no-style {
-	all: initial;
-  	
-	* {
-    	all: unset;
-  	}
 
-	#root {
-		position: relative;
-		z-index: -1;
-	}
-}
 
 /* clear browser defaults for empty space around the content */
 body {	margin: 0; }

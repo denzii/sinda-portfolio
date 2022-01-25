@@ -13,6 +13,11 @@
   	background: linear-gradient(a.neumorphDegree(upper-left-lightsource), #ffffff, #e6e6e6);
   	box-shadow:  8px 10px 16px #636363, 4px -2px 16px #666666;  
 
+	@include a.mobileMediaQuery {
+		//decrease neumorphism intensity
+		box-shadow:  8px 5px 9px #949494, 4px -2px 8px #8b8b8b;  
+	}
+
 	&__description {
 		&--hidden {
 			@include a.hiddenRules();

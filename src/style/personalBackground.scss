@@ -12,11 +12,10 @@
     &__section {
         position: relative;
         padding: 25px;
-        box-shadow:  2px -2px 15px #2f2f2f,
-        -2px 5px 15px #2f2f2f inset;
         scroll-margin-top: 4.75em;
         min-height: 660px;
         position: relative;
+        box-shadow:  0px -2px 7px #2f2f2f, 0px 5px 7px #2f2f2f inset;
 
         &--light-background{
             @include a.lightBackgroundRules();
@@ -65,9 +64,10 @@
                             background-color: ivory;
                             max-width: 200px;
                             z-index: 3;
-                            box-shadow:  0px 1px 6px #2f2f2f,
-                            0px 2px 16px #2f2f2f;
-                
+                            box-shadow:  0px 1px 6px #2f2f2f, 0px 2px 16px #2f2f2f;
+
+ 
+                            
                             &:hover {
                                 box-shadow:  0px 1px 25px #C3AF8F, 0px 2px 25px #544739;
                             }
@@ -77,6 +77,11 @@
                             
                             @include a.mobileMediaQuery{
                                 max-width: 175px;
+                                box-shadow:  0px 1px 6px #8a8989, 0px 2px 14px #6d6d6d;
+                                
+                                &:hover {
+                                    box-shadow:  0px 1px 15px #C3AF8F, 0px 2px 20px #544739;
+                                }
                             }
                         }
                     }
@@ -119,6 +124,12 @@
                     .details__description, .details__chronology {
                         padding-top: 5px;
                         font-weight: 600;
+                    }
+                    
+                    .description__text{
+                        &--no-style{
+                            @include a.noStyleRules();
+                        }
                     }
                 }
             }

@@ -17,7 +17,10 @@
     	box-shadow:  8px 20px 15px #242424, 4px -5px 10px #666666;
 
 		@include a.mobileMediaQuery{
+			// decrease hero section image size
 			max-width: 19.5em;
+			//decrease neumorphism intensity 
+			box-shadow:  6px 10px 12px #474747, 2px 0px 4px #666666;
 		}
   	}
 }
