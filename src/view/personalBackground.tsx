@@ -39,7 +39,7 @@ const PersonalBackground: (props: PersonalBackgroundProps) => JSX.Element  = (pr
                                             <Text description={detail.description} cssClass={"description__text"}/>
                                         </p>
                                         <p className='details__meta'>
-                                            <Text description={detail.metadata} cssClass={"description__text"}/>
+                                            <Text description={detail.metadata} cssClass={"meta__text"}/>
                                         </p>
                                     </details>
                                 </>}
