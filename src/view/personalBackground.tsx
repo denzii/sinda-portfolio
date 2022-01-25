@@ -8,6 +8,7 @@ import { connect, ComponentConstructor }  from '../model/view/context';
 import _ from '../model/view/keyableFragment';
 import Text from '../model/view/text';
 import Util from '../util';
+import FieldsetFigure from './fieldsetFigure';
 
 type PersonalBackgroundProps =  { background: Background };
 
@@ -25,20 +26,7 @@ const PersonalBackground: (props: PersonalBackgroundProps) => JSX.Element  = (pr
                     <dd className="data-group__data-definition" role="definition">
                         <HTMLTag as={getDetailTag(sectionName)} role="listitem">
                             <fieldset className="data-definition__fieldset">
-                                <address tabIndex={0}  role="link">
-                                    <a tabIndex={-1} href={detail.url ?? `#${sectionName}`} target={detail.url ? "_blank" : "_self"} rel="noopener noreferrer"> 
-                                        <figure className="anchor__figure">
-                                            <picture>
-                                                <img className="picture__image picture__image--zoom" src={detail.image.src} alt={detail.image.alt} title={detail.title?.definition ?? detail.image.title}/>
-                                            </picture> 
-                                            {detail.image.caption && 
-                                                <figcaption className={`anchor__figure-caption ${getDetailFigureCaptionCssModifier(sectionIndex)}`}> 
-                                                    <strong>{detail.image.caption}</strong>
-                                                </figcaption>
-                                            }
-                                        </figure>
-                                    </a>
-                                </address>
+                                <FieldsetFigure {...{ detail, sectionIndex, sectionName }}/>
                                 {detail.title && <>
                                     <details open={true}>
                                         <summary className='details__summary' tabIndex={0}>
@@ -60,11 +48,7 @@ const PersonalBackground: (props: PersonalBackgroundProps) => JSX.Element  = (pr
         </dl>
     </_>)}
 </>
-
 const getDetailTag: (sectionKey: string) => ElementType = (sectionKey) => (["resume", "hobbies"].includes(sectionKey) ? "aside" : "article");
-const getDetailFigureCaptionCssModifier: (sectionIndex: number) => string = (sectionIndex) => sectionIndex % 2 === 0 
-    ? "anchor__figure-caption--dark-overlay anchor__figure-caption--light-text" 
-    : "anchor__figure-caption--light-overlay anchor__figure-caption--dark-text";
 const getSectionCssModifier: (sectionIndex: number) => string = (sectionIndex) => sectionIndex % 2 === 0 ? "personal-background__section--light-background" : "personal-background__section--dark-background";
 
 const WithContextConsumer: ComponentConstructor = connect(Data);
