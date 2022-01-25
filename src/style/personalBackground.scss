@@ -71,10 +71,7 @@
                             &:hover {
                                 box-shadow:  0px 1px 25px #C3AF8F, 0px 2px 25px #544739;
                             }
-                            &:active:after{
-                                content:attr(title);
-                            }
-                            
+
                             &--zoom {
                                 @include a.zoomEffectRules();
                             }

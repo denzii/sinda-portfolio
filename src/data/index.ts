@@ -42,6 +42,7 @@ export default class Data {
                 { text: "was not limited to", format: TextFormat.Emphasized },
                 { text: "backend systems." },
             ],
+            [],
             "https://www.wrenkitchens.com/",
             { alt: "Official Wren Kitchens Corporate Logo", caption: undefined, src: require("../assets/wrenkitchens.webp"), title: "Wren Kitchens Logo" }
         ),
@@ -58,6 +59,7 @@ export default class Data {
                 { text: "and" },
                 { text: "video / live streaming.", format: TextFormat.Italic },
             ],
+            [],
             "https://www.mindgeek.com/",
             { alt: "Unofficial Mindgeek Logo with a brain drawing on black & white", caption: undefined, src: require("../assets/mindgeek.webp"), title: "Mindgeek Logo (Unofficial)" }
         ),
@@ -73,6 +75,7 @@ export default class Data {
                 { text:"Honours.", }
 
             ],
+            [],
             "https://www.hull.ac.uk/",
             { alt: "Official University Of Hull Logo", caption: undefined, src: require("../assets/uniofhull.webp"), title: "University of Hull Logo" }
         ),
@@ -80,10 +83,17 @@ export default class Data {
     
     private static PersonalProjects: () => Detail[] = () => [
         new Detail(
-            {text:  "Web Portfolio", definition:"Create React App with HTML5 & CSS3 Grid."}, 
+            {text:  "Web Portfolio", definition:"Create React App with HTML5 & CSS3."}, 
             "July 2020", 
             [
-                {text:"A simplistic Static Web Portfolio built using ReactJS as a first attempt on learning the framework." }
+                {text:"Pertains to this reusable, Open Source web portfolio template built using ReactJS, HTML5, CSS3 with SASS." }
+            ],
+            [
+                { text: "Keywords:", format: TextFormat.Bold },
+                { text: "ReactJS, TypeScript," },
+                { text: "CSS3, Sass," },
+                { text: "HTML5," },
+                { text: "Accesibility." },
             ],
             "https://github.com/denzii/web-portfolio/",
             { alt: "Official Reactjs Logo", caption: undefined, src: require("../assets/reactlogo.webp"), title: "ReactJS Logo" }
@@ -107,6 +117,12 @@ export default class Data {
                 { text: "SDK", format: TextFormat.Italic },
                 { text: "for easy library consumption." },
             ],
+            [
+                { text: "Keywords:", format: TextFormat.Bold },
+                { text: ".NET Core 3.1," },
+                { text: "EFCore (Code First)," },
+                { text: "ASPNet Identity." }
+            ],
             "https://github.com/denzii/AuthManager",
             { alt: "Unofficial .Net Core Web Api Logo", caption: undefined, src: require("../assets/authserver.webp"), title: ".NET Core Logo (Unofficial)" }
         ),
@@ -129,8 +145,18 @@ export default class Data {
                 { text: "Docker.", format: TextFormat.Italic},
                 { text: "Intended to become a whole automation suite to be controlled using the provided" },
                 { text: "command line interface", format: TextFormat.Italic },
-                { text: "written using"},
+                { text: "written using" },
                 { text: "React.", format: TextFormat.Italic },
+            ],
+            [
+                { text: "Keywords:", format: TextFormat.Bold },
+                { text: "React Ink, NodeJS, TypeScript," },
+                { text: "C#.NET 6, SignalR," },
+                { text: "Powershell," },
+                { text: "Bash," },
+                { text: "Automation." },
+                { text: "Command Line Interface." }
+
             ],
             "https://github.com/denzii/sindagal",
             { alt: "Icon of a robotic arm  holding the world by a thread", caption: "MVP incomplete, coming Soon!", src: require("../assets/sindagal.webp"), title: "Automation Icon" }
@@ -142,6 +168,9 @@ export default class Data {
                 { text: "Public source of truth for everything" },
                 { text: "Sindagal.", format:TextFormat.Emphasized },
                 { text: "This is intended to provide a base for the community & discussions about the future of the Sindagal project." },
+            ],
+            [
+
             ],
             undefined,
             { alt: "Icon of multiple hands joined as one", caption: "Coming Soon!", src: require("../assets/sindagalblog.webp"), title: "Unity icon" }
@@ -160,6 +189,7 @@ export default class Data {
                 { text: "\"Sindagal\"", format:TextFormat.Italic},
                 { text: "and making my work as convenient as possible to use / extend." },
             ],
+            [],
             undefined,
             { alt: "Icon of people emerging from two hands", caption:"", src: require("../assets/opensourcedev.webp") , title: "Care & love icon" }
         ),   
@@ -171,6 +201,7 @@ export default class Data {
                 { text:"sound", format: TextFormat.Emphasized },
                 { text:"mind." },
             ], 
+            [],
             undefined, 
             { alt: "Icon of Black & White Mandala portraying a flower", caption: undefined, src: require("../assets/mandala.webp"), title: "Mandala Icon" }
         ),
@@ -185,7 +216,8 @@ export default class Data {
                 { text:"two languages,", format:TextFormat.Italic },
                 { text:"two", format:TextFormat.Strong },
                 { text: "persons!" },
-            ], 
+            ],
+            [],
             undefined, 
             { alt: "Icon of a pictograph, a pen & a notepad", caption: undefined, src: require("../assets/chinese.webp"), title: "Pictograph Icon" }
         ),
@@ -198,6 +230,7 @@ export default class Data {
                 { text: "quality", format:TextFormat.Strong },
                 { text: "people." },
             ],
+            [],
             undefined,
             { alt: "Icon of Three Triangles representing tents for camping", caption:"", src: require("../assets/tents.webp") , title: "Pitched tents icon" }
         )
@@ -207,7 +240,8 @@ export default class Data {
         new Detail(
             undefined,
             "", 
-            [{text:""}], 
+            [{text:""}],
+            [], 
             require('../assets/resume.pdf'), 
             { alt: "Icon of a black dot enclosed within an almond shape portraying an eye", caption: "Download PDF now!", src: require("../assets/eye.webp"), title: "Eye Icon"})
     ];

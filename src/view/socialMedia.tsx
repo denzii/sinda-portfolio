@@ -27,6 +27,3 @@ const getTargetPlatformHref: (targetPlatformName: string, navigationUrl: string)
 
 const WithContextConsumer: ComponentConstructor = connect(Data);
 export default WithContextConsumer(SocialMedia);
-
-
-
