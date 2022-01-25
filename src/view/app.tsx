@@ -52,7 +52,7 @@ export default App;
  * @todo ✓ investigate how to get the top and bottom empty spaces in the sections to be equal with flexbox
  * @todo ✓ add ease scroll effect when pressed on navigation section 
  * @todo ✓ include an optional "technologies used" text with a different font formatting underneath the images above the actual description
- * @todo proof read all content 
+ * @todo ✓ proof read all content 
  * @todo add a comprehensive readme
  * @todo forget about additional improvements apart from the above and move onto something else for a while
  * 
