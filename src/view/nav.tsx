@@ -34,7 +34,7 @@ const Nav: (props: HeaderNavProps) => JSX.Element = (props) => {
     
     return <>
         <h3 >
-            <a href="/#" className="nav-logo-text__anchor" title='Scroll to Top'>{ props.logoText }</a>
+            <a href="/#" className="nav-logo-text__anchor" title='Scroll to Top' onClick={onAnchorNavigation}>{props.logoText}</a>
         </h3>
         <nav className="header__desktop-nav">
             <menu className="desktop-nav__menu">

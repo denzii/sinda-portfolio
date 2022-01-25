@@ -13,7 +13,7 @@
         position: relative;
         padding: 25px;
         scroll-margin-top: 4.75em;
-        min-height: 660px;
+        min-height: 87.5vh;
         position: relative;
         box-shadow:  0px -2px 7px #2f2f2f, 0px 5px 7px #2f2f2f inset;
 
@@ -27,10 +27,22 @@
         
         .data-tag__text{
             letter-spacing: 0.05em;
-            margin: 10px;
+            margin-top: 70px;
+            margin-bottom: 60px;
+
             font-weight: 600;
             text-align: center;
-            margin-top:40px;
+            
+            //hack to make the above and below empty spaces around the image even in size because I couldn't sort out something better as quickly as I wanted
+            // TODO: refactor to use either
+            // a) Flex Basis: a value of 100% on the h3 (.data-tag__text) to take it out of the flex-flow so it could have a fixed position in the container also the image
+            //    could be centred as if the heading is not in the flex container
+            // b) Overlayed Divs: the div containing the image should go over the h3 (section__data-group) and be given a z-index, it also should inherit the height of the parent & have its contents 
+            //    centred more easily.
+            @include a.mobileMediaQuery {
+                // margin-top: 30px;
+                // margin-bottom: 10px;
+            }
         }
         
         .section__data-group {
@@ -40,6 +52,7 @@
             flex-wrap: wrap;
     
             padding-top: 3em;
+            padding-bottom: 3em;
         
              * {
                 margin-left: auto;
@@ -52,6 +65,7 @@
                 .data-definition__fieldset {
                     border: 0;
                     padding-top: 10px;
+                    padding-bottom: 92.5px;
                     text-align: center;
                     max-width: 320px;
 
