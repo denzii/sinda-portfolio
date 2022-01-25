@@ -55,4 +55,5 @@ export default App;
  * @todo proof read all content 
  * @todo add a comprehensive readme
  * @todo forget about additional improvements apart from the above and move onto something else for a while
+ * @todo phase2: refactor the minor css hack to use flex basis to get pixel perfect results
 */
