@@ -81,6 +81,7 @@
  			// is there a better way to achive it through flexbox without playing with width or media q? 
 			@include a.mobileMediaQuery {
 				width: 100%;
+				padding-bottom:5px;
 			}
 
 			// for low end viewports,

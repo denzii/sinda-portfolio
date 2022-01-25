@@ -8,7 +8,9 @@
     but we may not want the emphasized element to be displayed in italics 
     in these scenarios the below selectors are useful */
 
-
+html{
+	scroll-behavior: smooth;
+}
 /* clear browser defaults for empty space around the content */
 body {	margin: 0; }
 
