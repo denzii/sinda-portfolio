@@ -13,7 +13,7 @@ class MyDocument extends Document {
           	<title>Deniz Arca&apos;s Web Portfolio</title>
         	<Head>
 				<meta charSet="utf-8" />
-				<link rel="canonical" href="https://denizarca.com" />
+				<link rel="canonical" href="https://www.denizarca.com" />
 				<link rel="shortcut icon" href="/public/favicon.ico" />
 				<link rel="shortcut icon" type="image/png" href="public/images/favicon.png"/>
 				<link rel="shortcut icon" sizes="192x192" href="public/images/favicon.ico"/>
