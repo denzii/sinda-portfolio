@@ -26,7 +26,10 @@ const Nav: (props: HeaderNavProps) => JSX.Element = (props) => {
     const MobileMenuIcon:() => JSX.Element = isMobileMenuOpen ? () => <MobileMenuClosedIcon/> : () => <MobileMenuOpenedIcon/>;
 
     return <>
-        <a className="header__anchor" href="/#" title='Scroll to Top' onClick={onAnchorNavigation}><h3>{props.logoText}</h3></a>
+        <a className="header__anchor" href="/#" title='Scroll to Top' onClick={onAnchorNavigation}>
+                <h3>{props.logoText}</h3>
+        </a>
+
         <nav className="header__desktop-nav">
             <ul className="desktop-nav__menu">
                 {props.navigationLinks.map(sectionKey => <_ key={`menu__element-${sectionKey}`}>
@@ -38,6 +41,7 @@ const Nav: (props: HeaderNavProps) => JSX.Element = (props) => {
                 </_>)}
             </ul>
         </nav>
+        
         <nav className="header__mobile-nav" aria-labelledby="header__mobile-nav__label">
             <label className="mobile-nav__label" htmlFor="mobile-nav__button" id="mobile-nav__label" aria-label="Mobile Navigation Menu Toggle" >
                 Navigation Menu toggle used for mobile size screen resolutions
