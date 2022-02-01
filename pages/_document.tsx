@@ -15,10 +15,10 @@ class MyDocument extends Document {
 				<meta charSet="utf-8" />
 				{/** @TODO get all of below data from props */}
 				<link rel="canonical" href="https://www.denizarca.com" />
-				<link rel="shortcut icon" href="/public/favicon.ico" />
-				<link rel="shortcut icon" type="image/png" href="public/images/favicon.png"/>
-				<link rel="shortcut icon" sizes="192x192" href="public/images/favicon.ico"/>
-				<link rel="apple-touch-icon" href="/public/images/favicon.ico"/>
+				<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+				<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+				<link rel="shortcut icon" type="image/x-icon" sizes="192x192" href="images/favicon.ico"/>
+				<link rel="apple-touch-icon" type="image/x-icon" href="images/favicon.ico"/>
 
 				<meta name="author" content="Deniz Arca" />
 				<meta name="keywords" content="Software, Engineer, Developer, Full Stack, FullStack, Backend, Frontend, DevOps" /> 
