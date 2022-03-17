@@ -137,7 +137,7 @@ export default class Data {
             { alt: "Unofficial .Net Core Web Api Logo", caption: null, src: JSON.stringify(require("../public/authserver.webp")), title: ".NET Core Logo (Unofficial)" }
         ),
         new Detail(
-            {text: "Sindagal OpenSource Platform Automations & CLI", definition: "React Ink with Nodejs using Typescript, C#.NET 6 with SignalR, Powershell & Bash" }, 
+            {text: "Sindagal OpenSource Platform Automations & CLI", definition: "React Ink with Nodejs using Typescript, Powershell & Bash" }, 
             "August 2021 - March 2022",
             [
                 { text:"Self automation project for" },
@@ -159,18 +159,16 @@ export default class Data {
             [
                 { text: "Keywords:", format: TextFormat.Bold },
                 { text: "React Ink, NodeJS, TypeScript," },
-                { text: "C#.NET 6, SignalR," },
                 { text: "Powershell," },
-                { text: "Bash," },
                 { text: "DevOps Automation," },
                 { text: "Command Line Interface," },
                 { text: "Open Source" },
             ],
             "https://github.com/denzii/sindagal",
-            { alt: "Icon of a robotic arm  holding the world by a thread", caption: "MVP incomplete ... Coming Soon!", src: JSON.stringify(require("../public/sindagal.webp")), title: "Automation Icon" }
+            { alt: "Icon of a robotic arm  holding the world by a thread", caption: null, src: JSON.stringify(require("../public/sindagal.webp")), title: "Automation Icon" }
         ),
         new Detail(
-            {text: "Sindagal OpenSource Blog", definition: "React Server Side Rendering with Nodejs using Typescript, HTML5 & Tailwind CSS with SEO Optimizations" }, 
+            {text: "Sindagal OpenSource Blog", definition: ".NET 6 MVC with Entity Framework Core & MSSQL as well as Webpack, Typescript and SCSS." }, 
             "N/A",
             [
                 { text: "Public source of truth for everything" },
@@ -178,10 +176,18 @@ export default class Data {
                 { text: "This is intended to provide a base for the community & discussions about the future of the Sindagal project." },
             ],
             [
-
+                { text: "Keywords:", format: TextFormat.Bold },
+                { text: "C#.NET 6 MVC," },
+                { text: "Typescript," },
+                { text: "SCSS," },
+                { text: "Webpack," },
+                { text: "Docker/ Docker Compose," },
+                { text: "Minikube," },
+                { text: "DevOps Automation," },
+                { text: "Open Source" },
             ],
             null,
-            { alt: "Icon of multiple hands joined as one", caption: "Coming Soon!", src: JSON.stringify(require("../public/sindagalblog.webp")), title: "Unity icon" }
+            { alt: "Icon of multiple hands joined as one", caption: "Currently Being Tested", src: JSON.stringify(require("../public/sindagalblog.webp")), title: "Unity icon" }
         ),
     ];
 
