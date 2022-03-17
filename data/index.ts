@@ -82,7 +82,7 @@ export default class Data {
     
     private static PersonalProjects: () => Detail[] = () => [
         new Detail(
-            {text: "Web Portfolio", definition:"Create React App with HTML5 & CSS3."}, 
+            {text: "Web Portfolio", definition:"NextJS App with HTML5 & CSS3."}, 
             "July 2020 - January 2022", 
             [
                 {text:"Pertains to" },
@@ -100,6 +100,7 @@ export default class Data {
             [
                 { text: "Keywords:", format: TextFormat.Bold },
                 { text: "ReactJS, TypeScript," },
+                { text: "NextJS," },
                 { text: "CSS3, Sass," },
                 { text: "HTML5," },
                 { text: "Web Accesibility," },
