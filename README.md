@@ -1,7 +1,12 @@
 
 # Sinda Portfolio
-https://img.shields.io/github/languages/count/denzii/sinda-portfolio
-https://img.shields.io/badge/License-MIT-blue
+![License](https://img.shields.io/badge/License-MIT-green)
+![SEO](https://img.shields.io/badge/SEO-OK-green)
+![Accessibility](https://img.shields.io/badge/Accessibility-OK-yellowgreen)
+![Responsive Design](https://img.shields.io/badge/Responsive%20Design-Yes-green)
+![Languages](https://img.shields.io/github/languages/count/denzii/sinda-portfolio)
+
+
 
 This repository contains the code needed to get up and running with a personal portfolio website and to display personal achievements. It is intended to be used by anyone in need of web presence and not only for IT professionals. 
 
