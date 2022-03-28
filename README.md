@@ -1,8 +1,6 @@
 
 # Sinda Portfolio
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Language Count](https://img.shields.io/github/languages/count/denzii/sinda-portfolio)
-
 
 
 This repository contains the code needed to get up and running with a personal portfolio website and to display personal achievements. It is intended to be used by anyone in need of web presence and not only for IT professionals. 
