@@ -1,7 +1,7 @@
 
 # Sinda Portfolio
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Languages](https://img.shields.io/github/languages/count/denzii/sinda-portfolio)
+![Language Count](https://img.shields.io/github/languages/count/denzii/sinda-portfolio)
 
 
 
