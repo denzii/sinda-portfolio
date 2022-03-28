@@ -1,5 +1,5 @@
 
-# Sinda Portfolio Boilerplate
+# Sinda Portfolio
 
 This repository contains the code needed to get up and running with a personal portfolio website and to display personal achievements. It is intended to be used by anyone in need of web presence and not only for IT professionals. 
 
