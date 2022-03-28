@@ -1,3 +1,51 @@
+
+# Sinda Portfolio
+
+This repository contains the code needed to get up and running with a personal portfolio website and to display personal achievements. It is intended to be used by anyone in need of web presence and not only for IT professionals. 
+
+
+## Demo
+
+A live version could be found at https://denizarca.com
+
+
+## Features
+
+- Responsive design
+- Fully dynamic content which can be edited through a single class
+- SEO Ready with basic optimizations already in place
+- Keyboard accessibility
+- Automated deployments through Vercel
+
+
+## Documentation
+
+The steps on using this template are documented
+[@ sindagal.org](https://sindagal.org/Docs) inside the Docs page within the Boilerplate tab!
+
+## Authors
+
+- Development & UX by [@denzii](https://github.com/denzii)
+- UI Design & Inspiration by [@metemorris](https://github.com/metemorris)
+
+## Contributing
+
+Contributions as well as feedback are always welcome! Feel free to fork this repository, submit pull requests, open issues or contact me directly at my 
+[Linkedin](https://www.linkedin.com/in/denizarca/) if there are any problems with the code or the documentation.
+## Roadmap
+
+- Dark & Colourblind Modes
+- Content Editor UI
+- Internationalization 
+
+## Tech Stack
+
+**Client & Server:** React, NextJS Sass, TypeScript, HTML5, CSS3
+
+
+## Run Locally
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
