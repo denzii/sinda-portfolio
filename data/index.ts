@@ -261,7 +261,7 @@ export default class Data {
             [{text:""}],
             [], 
             "resume.pdf", 
-            { alt: "Icon of a black dot enclosed within an almond shape portraying an eye", caption: "Download PDF now!", src: JSON.stringify(require("../public/eye.webp")), title: "Eye Icon"})
+            { alt: "Icon of a professional", caption: "Download PDF now!", src: JSON.stringify(require("../public/eye.webp")), title: "Eye Icon"})
     ];
 
     private static PersonalUrls: () => PersonalURLs = () => ({
