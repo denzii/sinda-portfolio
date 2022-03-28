@@ -16,9 +16,9 @@ export default class Data {
         
     private static PersonalBackground: () => Background = () => ({
         work: Data.WorkExperience(),
-        project: Data.PersonalProjects(),
+        projects: Data.PersonalProjects(),
         education: Data.EducationHistory(),
-        hobby: Data.RecreationalActivities(),
+        hobbies: Data.RecreationalActivities(),
         resume: Data.Resume()
     })
 
@@ -72,7 +72,6 @@ export default class Data {
                 { text:"Bachelor's degree, Computer Software Engineering."},
                 { text:"First Class", format: TextFormat.Strong },
                 { text:"Honours.", }
-
             ],
             [],
             "https://www.hull.ac.uk/",
@@ -83,7 +82,7 @@ export default class Data {
     private static PersonalProjects: () => Detail[] = () => [
         new Detail(
             {text: "Web Portfolio", definition:"NextJS App with HTML5 & CSS3."}, 
-            "July 2020 - January 2022", 
+            "July 2020", 
             [
                 {text:"Pertains to" },
                 {text:"this", format:TextFormat.Emphasized },
@@ -106,40 +105,12 @@ export default class Data {
                 { text: "Web Accesibility," },
                 { text: "Open Source" }
             ],
-            "https://github.com/denzii/sindagal-portfolio-template",
+            "https://github.com/denzii/sinda-portfolio",
             { alt: "Official Reactjs Logo", caption: null, src: JSON.stringify(require("../public/reactlogo.webp")), title: "ReactJS Logo" }
         ),
         new Detail(
-            {text: "Auth Server API", definition: ".NET Core 3.1 with Swagger, EFCore (Code First) & Identity Framework." }, 
-            "April 2020", 
-            [
-                { text: "A REST appropriated " },
-                { text: "learning project", format:TextFormat.Emphasized },
-                { text: "implementing" },
-                { text: "JWT authentication", format:TextFormat.Italic },
-                { text: "and" },
-                { text: "authorization", format: TextFormat.Italic },
-                { text: "with the use of refresh tokens. Makes" },
-                { text: "extensive", format: TextFormat.Emphasized },
-                { text: "use of custom implemented controller middle-wares &" },
-                { text: "includes a"},
-                { text: "Unit Test", format: TextFormat.Italic  },
-                { text: "project & an" },
-                { text: "SDK", format: TextFormat.Italic },
-                { text: "for easy library consumption." },
-            ],
-            [
-                { text: "Keywords:", format: TextFormat.Bold },
-                { text: ".NET Core 3.1," },
-                { text: "EFCore (Code First)," },
-                { text: "ASPNet Identity" }
-            ],
-            "https://github.com/denzii/AuthManager",
-            { alt: "Unofficial .Net Core Web Api Logo", caption: null, src: JSON.stringify(require("../public/authserver.webp")), title: ".NET Core Logo (Unofficial)" }
-        ),
-        new Detail(
-            {text: "Sindagal OpenSource Platform Automations & CLI", definition: "React Ink with Nodejs using Typescript, Powershell & Bash" }, 
-            "August 2021 - March 2022",
+            {text: "Sindagal Open Source Platform Automations & CLI", definition: "React Ink with Nodejs using Typescript, Powershell & Bash" }, 
+            "August 2021 - February 2022",
             [
                 { text:"Self automation project for" },
                 { text: "cumbersome", format:TextFormat.Emphasized },
@@ -160,21 +131,24 @@ export default class Data {
             [
                 { text: "Keywords:", format: TextFormat.Bold },
                 { text: "React Ink, NodeJS, TypeScript," },
-                { text: "Powershell," },
+                { text: "Powershell, Bash," },
+                { text: "EF Core (Code First)"},
                 { text: "DevOps Automation," },
                 { text: "Command Line Interface," },
                 { text: "Open Source" },
             ],
-            "https://github.com/denzii/sindagal",
+            "https://github.com/denzii/sinda-cli",
             { alt: "Icon of a robotic arm  holding the world by a thread", caption: null, src: JSON.stringify(require("../public/sindagal.webp")), title: "Automation Icon" }
         ),
         new Detail(
-            {text: "Sindagal OpenSource Blog", definition: ".NET 6 MVC with Entity Framework Core & MSSQL as well as Webpack, Typescript and SCSS." }, 
-            "N/A",
+            {text: "Sindagal Open Source Knowledge Base", definition: ".NET 6 MVC with Entity Framework Core & MSSQL as well as Webpack, Typescript and SASS." }, 
+            "February 2022 - March 2022",
             [
                 { text: "Public source of truth for everything" },
                 { text: "Sindagal.", format:TextFormat.Emphasized },
-                { text: "This is intended to provide a base for the community & discussions about the future of the Sindagal project." },
+                { text: "This is intended to provide a base for the community, documentations & discussions about the future of the Sindagal project." },
+                { text: "A live version could be viewed at: ", format:TextFormat.Emphasized },
+                { text: "sindagal.org"}
             ],
             [
                 { text: "Keywords:", format: TextFormat.Bold },
@@ -183,12 +157,41 @@ export default class Data {
                 { text: "SCSS," },
                 { text: "Webpack," },
                 { text: "Docker/ Docker Compose," },
-                { text: "Minikube," },
-                { text: "DevOps Automation," },
+                { text: "Azure CLI, Azure App Service, Azure DevOps," },
+                { text: "Bash," },
                 { text: "Open Source" },
             ],
-            null,
-            { alt: "Icon of multiple hands joined as one", caption: "Currently Being Tested", src: JSON.stringify(require("../public/sindagalblog.webp")), title: "Unity icon" }
+            "https://github.com/denzii/sinda-cms",
+            { alt: "Icon of multiple hands joined as one", caption: null, src: JSON.stringify(require("../public/sindagalblog.webp")), title: "Unity icon" }
+        ),
+        new Detail(
+            {text: "Auth Server API", definition: ".NET Core 3.1 with Swagger, EFCore (Code First) & Identity Framework." }, 
+            "April 2020", 
+            [
+                { text: "A REST appropriated " },
+                { text: "retired learning project", format:TextFormat.Emphasized },
+                { text: "implementing" },
+                { text: "JWT authentication", format:TextFormat.Italic },
+                { text: "and" },
+                { text: "authorization", format: TextFormat.Italic },
+                { text: "with the use of refresh tokens. Makes" },
+                { text: "extensive", format: TextFormat.Emphasized },
+                { text: "use of custom implemented controller middle-wares &" },
+                { text: "includes a"},
+                { text: "Unit Test", format: TextFormat.Italic  },
+                { text: "project & an" },
+                { text: "SDK", format: TextFormat.Italic },
+                { text: "for easy library consumption." },
+                { text: "This project is now retired." },
+            ],
+            [
+                { text: "Keywords:", format: TextFormat.Bold },
+                { text: ".NET Core 3.1," },
+                { text: "EFCore (Code First)," },
+                { text: "ASPNet Identity" }
+            ],
+            "https://github.com/denzii/AuthManager",
+            { alt: "Unofficial .Net Core Web Api Logo", caption: null, src: JSON.stringify(require("../public/authserver.webp")), title: ".NET Core Logo (Unofficial)" }
         ),
     ];
 
