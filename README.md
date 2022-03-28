@@ -1,9 +1,6 @@
 
 # Sinda Portfolio
 ![License](https://img.shields.io/badge/License-MIT-green)
-![SEO](https://img.shields.io/badge/SEO-OK-green)
-![Accessibility](https://img.shields.io/badge/Accessibility-OK-yellowgreen)
-![Responsive Design](https://img.shields.io/badge/Responsive%20Design-Yes-green)
 ![Languages](https://img.shields.io/github/languages/count/denzii/sinda-portfolio)
 
 
