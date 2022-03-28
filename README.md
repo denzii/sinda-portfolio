@@ -21,7 +21,7 @@ A live version could be found at https://denizarca.com
 ## Documentation
 
 The steps on using this template are documented
-[here](https://sindagal.org/Docs) within the Boilerplate tab!
+[@sindagal.org](https://sindagal.org/Docs) In the Docs page within the Boilerplate tab!
 
 ## Authors
 
