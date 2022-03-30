@@ -81,7 +81,7 @@ export default class Data {
     
     private static PersonalProjects: () => Detail[] = () => [
         new Detail(
-            {text: "Web Portfolio", definition:"NextJS App with HTML5 & CSS3."}, 
+            {text: "Sinda Web Portfolio", definition:"NextJS App with HTML5 & CSS3."}, 
             "July 2020", 
             [
                 {text:"Pertains to" },
@@ -109,7 +109,7 @@ export default class Data {
             { alt: "Official Reactjs Logo", caption: null, src: JSON.stringify(require("../public/reactlogo.webp")), title: "ReactJS Logo" }
         ),
         new Detail(
-            {text: "Sindagal Open Source Platform Automations & CLI", definition: "React Ink with Nodejs using Typescript, Powershell & Bash." }, 
+            {text: "Sinda Platform Automations & CLI", definition: "React Ink with Nodejs using Typescript, Powershell & Bash." }, 
             "August 2021 - February 2022",
             [
                 { text:"Self automation project for" },
@@ -140,7 +140,7 @@ export default class Data {
             { alt: "Icon of a robotic arm  holding the world by a thread", caption: null, src: JSON.stringify(require("../public/sindagal.webp")), title: "Automation Icon" }
         ),
         new Detail(
-            {text: "Sindagal Open Source Knowledge Base", definition: ".NET 6 MVC with Entity Framework Core & MSSQL as well as Webpack, Typescript and SASS." }, 
+            {text: "Sinda Knowledge Base", definition: ".NET 6 MVC with Entity Framework Core & MSSQL as well as Webpack, Typescript and SASS." }, 
             "February 2022 - March 2022",
             [
                 { text: "Public source of truth for everything" },
