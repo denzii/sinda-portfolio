@@ -109,7 +109,7 @@ export default class Data {
             { alt: "Official Reactjs Logo", caption: null, src: JSON.stringify(require("../public/reactlogo.webp")), title: "ReactJS Logo" }
         ),
         new Detail(
-            {text: "Sinda Platform Automations & CLI", definition: "React Ink with Nodejs using Typescript, Powershell & Bash." }, 
+            {text: "Sinda Command Line Interface & Platform", definition: "React Ink with Nodejs using Typescript, Powershell & Bash." }, 
             "August 2021 - February 2022",
             [
                 { text:"Self automation project for" },
