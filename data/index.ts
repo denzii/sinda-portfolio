@@ -15,8 +15,8 @@ export default class Data {
     );
         
     private static PersonalBackground: () => Background = () => ({
-        work: Data.WorkExperience(),
         projects: Data.PersonalProjects(),
+        work: Data.WorkExperience(),
         education: Data.EducationHistory(),
         hobbies: Data.RecreationalActivities(),
         resume: Data.Resume()
@@ -87,7 +87,7 @@ export default class Data {
                 {text:"Pertains to" },
                 {text:"this", format:TextFormat.Emphasized },
                 {text:"website itself." },
-                {text:"open source", format:TextFormat.Emphasized, unstyled: true },
+                {text:"An open source", format:TextFormat.Emphasized, unstyled: true },
                 {text:"web portfolio template" },
                 {text:"which focuses on" },
                 {text:"reusablility", format:TextFormat.Emphasized },
@@ -109,7 +109,7 @@ export default class Data {
             { alt: "Official Reactjs Logo", caption: null, src: JSON.stringify(require("../public/reactlogo.webp")), title: "ReactJS Logo" }
         ),
         new Detail(
-            {text: "Sindagal Open Source Platform Automations & CLI", definition: "React Ink with Nodejs using Typescript, Powershell & Bash" }, 
+            {text: "Sindagal Open Source Platform Automations & CLI", definition: "React Ink with Nodejs using Typescript, Powershell & Bash." }, 
             "August 2021 - February 2022",
             [
                 { text:"Self automation project for" },
@@ -132,7 +132,6 @@ export default class Data {
                 { text: "Keywords:", format: TextFormat.Bold },
                 { text: "React Ink, NodeJS, TypeScript," },
                 { text: "Powershell, Bash," },
-                { text: "EF Core (Code First)"},
                 { text: "DevOps Automation," },
                 { text: "Command Line Interface," },
                 { text: "Open Source" },
@@ -165,7 +164,7 @@ export default class Data {
             { alt: "Icon of multiple hands joined as one", caption: null, src: JSON.stringify(require("../public/sindagalblog.webp")), title: "Unity icon" }
         ),
         new Detail(
-            {text: "Auth Server API", definition: ".NET Core 3.1 with Swagger, EFCore (Code First) & Identity Framework." }, 
+            {text: "Auth Server API", definition: "C#.NET Core 3.1 with Swagger, EFCore (Code First) & Identity Framework." }, 
             "April 2020", 
             [
                 { text: "A REST appropriated " },
