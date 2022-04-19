@@ -31,7 +31,7 @@ export default class Data {
     private static WorkExperience: () => Detail[] = () => [
         new Detail(
             {text: "Mindgeek", definition: "Global innovators in FinTech & Media Content Delivery specializing in the Adult Entertainment Industry." }, 
-            "August 2020 - December 2021", 
+            "August 2020 - January 2022", 
             [
                 { text: "Worked as a" },
                 { text: "Full Stack Developer", format: TextFormat.Emphasized },
