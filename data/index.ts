@@ -30,7 +30,22 @@ export default class Data {
 
     private static WorkExperience: () => Detail[] = () => [
         new Detail(
-            {text: "Mindgeek", definition: "Global innovators in FinTech & Media Content Delivery specializing in the Adult Entertainment Industry." }, 
+            {text: "FilmChain", definition: "Global innovators with our solutions on Collection Account Management & Fintech within the Films domain helping producers around the word." }, 
+            "June 2022 - Present", 
+            [
+                { text: "Working as a" },
+                { text: "Full Stack Enginner", format: TextFormat.Emphasized },
+                { text: "on our" },
+                { text: "flagship products", format: TextFormat.Emphasized },
+                { text: "for film producers and enterprises providing" },
+                { text: "financial and CAMA services", format: TextFormat.Italic },
+            ],
+            [],
+            "https://www.filmchain.co/",
+            { alt: "FilmChain Logo", caption: null, src: JSON.stringify(require("../public/images/filmchain.png")), title: "FilmChain Logo" }
+        ),
+        new Detail(
+            {text: "Mindgeek", definition: "Global icons in Media Content Delivery specializing in the Adult Entertainment Industry." }, 
             "August 2020 - January 2022", 
             [
                 { text: "Worked as a" },
@@ -80,6 +95,22 @@ export default class Data {
     ];
     
     private static PersonalProjects: () => Detail[] = () => [
+        new Detail(
+            {text: "Tango Siempre Website", definition: "Test URL Live at https://tango-siempre-2-denzii.vercel.app/" }, 
+            "December 2023", 
+            [
+                { text: "Coming Soon!" },
+                { text: "Non profit...", format:TextFormat.Emphasized },
+            ],
+            [
+                { text: "Keywords:", format: TextFormat.Bold },
+                { text: "NextJS 13," },
+                { text: "Typescript, Sass" },
+                { text: "JSX" }
+            ],
+            "https://tango-siempre-2-denzii.vercel.app/",
+            { alt: "Tango Siempre Logo", caption: "Work In Progress", src: JSON.stringify(require("../public/images/tango-siempre.png")), title: "Tango Siempre Logo" }
+        ),
         new Detail(
             {text: "Sinda Web Portfolio", definition:"NextJS App with HTML5 & CSS3."}, 
             "July 2020", 
