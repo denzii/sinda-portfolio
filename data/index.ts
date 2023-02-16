@@ -25,7 +25,7 @@ export default class Data {
     public static PersonalBrand: () => Brand = () => ({
         urls: Data.PersonalUrls(),
         background: {alt:"Background image portraying an abandoned church in Famagusta, Northern Cyprus", imageStyleClass: "background-image-kilise", src: require("../public/kilise.webp"), title: "Abandoned church, Famagusta Cyprus", caption:null},
-        headshot: { alt: "Deniz Arca's professional Headshot from the year 2017", caption: null, src: JSON.stringify(require("../public/deniz.webp")), title:"Deniz Arca, 2017"},
+        headshot: { alt: "Deniz Arca's professional Headshot from the year 2017", caption: null, src: JSON.stringify(require("../public/deniz.jpg")), title:"Deniz Arca, 2017"},
     });
 
     private static WorkExperience: () => Detail[] = () => [
