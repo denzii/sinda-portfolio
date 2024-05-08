@@ -22,10 +22,10 @@ const Home: NextPage<HomeProps> = (props) => {
 			<section role="img" className='hero' aria-labelledby='hero__description'>
 				<h2 className='hero__description hero__description--hidden' id="hero__description"> Presentational hero section images with a centered professional headshot and a background image.</h2>
 				<picture className='hero__background-picture'>
-					<Image role="img" className="background-picture__image" layout="fill" objectFit='cover' src={props.background.src} aria-label={`${props.background.alt} & ${props.headshot.alt}`}  alt={props.background.alt} />
+					<Image role="img" className="background-picture__image" layout="fill" objectFit='cover' src={String(props.background.src)} aria-label={`${props.background.alt} & ${props.headshot.alt}`}  alt={props.background.alt} />
 				</picture>
 				<picture className="hero__foreground-picture">
-					<Image role="img" className="foreground-picture__image" src={props.headshot.src?.slice(1, -1)}  height={890} width={915} alt={props.headshot.alt} title={props.headshot.title} id="foreground"/>
+					<Image role="img" className="foreground-picture__image" src={String(props.headshot.src?.slice(1, -1))}  height={890} width={915} alt={props.headshot.alt} title={props.headshot.title} id="foreground"/>
 				</picture>
 			</section>
 			<hr/>
