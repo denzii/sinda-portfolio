@@ -15,8 +15,8 @@ export default class Data {
     );
         
     private static PersonalBackground: () => Background = () => ({
-        projects: Data.PersonalProjects(),
         work: Data.WorkExperience(),
+        projects: Data.PersonalProjects(),
         education: Data.EducationHistory(),
         hobbies: Data.RecreationalActivities(),
         resume: Data.Resume()
@@ -30,12 +30,28 @@ export default class Data {
 
     private static WorkExperience: () => Detail[] = () => [
         new Detail(
-            {text: "FilmChain", definition: "Global innovators with our solutions on Collection Account Management & Fintech within the Films domain helping producers around the word." }, 
+            {text: "MetaWin - Senior Full Stack Engineer", definition: "Innovators of Web3 Gaming with their game aggregation abstractions known for high returns to players, seemless crypto transactions & known for their code driven digital marketting strategies." }, 
             "June 2022 - Present", 
             [
                 { text: "Working as a" },
-                { text: "Full Stack Enginner", format: TextFormat.Emphasized },
+                { text: "Senior Full Stack Enginner", format: TextFormat.Emphasized },
                 { text: "on our" },
+                { text: "impressive gaming platform", format: TextFormat.Emphasized },
+                { text: "for gaming / gambling & cryptocurrency enthusiasts enabling" },
+                { text: "blockchain based currency transactions", format: TextFormat.Italic },
+                { text: "for gaming domains & providing accessibility for the common user." },
+            ],
+            [],
+            "https://metawin.com/",
+            { alt: "MetaWin Logo", caption: null, src: JSON.stringify(require("../public/images/metawin_logo.jpg")), title: "MetaWin Logo" }
+        ),
+        new Detail(
+            {text: "FilmChain - Full Stack Engineer", definition: "Global innovators with their solutions on Collection Account Management & Fintech within the Films domain helping producers around the word." }, 
+            "June 2022 - March 2023", 
+            [
+                { text: "Worked as a" },
+                { text: "Full Stack Enginner", format: TextFormat.Emphasized },
+                { text: "on their" },
                 { text: "flagship products", format: TextFormat.Emphasized },
                 { text: "for film producers and enterprises providing" },
                 { text: "financial and CAMA services", format: TextFormat.Italic },
@@ -45,7 +61,7 @@ export default class Data {
             { alt: "FilmChain Logo", caption: null, src: JSON.stringify(require("../public/images/filmchain.png")), title: "FilmChain Logo" }
         ),
         new Detail(
-            {text: "Mindgeek", definition: "Global icons in Media Content Delivery specializing in the Adult Entertainment Industry." }, 
+            {text: "Mindgeek - Software Engineer", definition: "Global icons in Media Content Delivery specializing in the Adult Entertainment Industry." }, 
             "August 2020 - January 2022", 
             [
                 { text: "Worked as a" },
@@ -62,7 +78,7 @@ export default class Data {
             { alt: "Unofficial Mindgeek Logo with a brain drawing on black & white", caption: null, src: JSON.stringify(require("../public/mindgeek.webp")), title: "Mindgeek Logo (Unofficial)" }
         ),
         new Detail(
-            {text: "Wren Kitchens", definition: "Britain's leading Kitchens designer/manufacturer with an award winning IT department & over 90 stores." },
+            {text: "Wren Kitchens - Junior Backend Developer", definition: "Britain's leading Kitchens designer/manufacturer with an award winning IT department & over 90 stores." },
             "October 2018 - February 2020",
             [
                 { text: "Worked as a" },
@@ -109,7 +125,7 @@ export default class Data {
                 { text: "JSX" }
             ],
             "https://tango-siempre-2-denzii.vercel.app/",
-            { alt: "Tango Siempre Logo", caption: "Work In Progress", src: JSON.stringify(require("../public/images/tango-siempre.png")), title: "Tango Siempre Logo" }
+            { alt: "Tango Siempre Logo", caption: "Discontinued", src: JSON.stringify(require("../public/images/tango-siempre.png")), title: "Tango Siempre Logo" }
         ),
         new Detail(
             {text: "Sinda Web Portfolio", definition:"NextJS App with HTML5 & CSS3."}, 
