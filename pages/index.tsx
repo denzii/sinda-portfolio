@@ -39,10 +39,10 @@ const Home: NextPage<HomeProps> = (props) => {
 				<PersonalBackground /> 
 			</main>
 			<hr/>
-			<footer role="banner" className="footer" aria-labelledby='footer__description'> 
+			{/* <footer role="banner" className="footer" aria-labelledby='footer__description'> 
 				<h2 className='footer__description footer__description--hidden'> Copyright notice. </h2>
 				<p className="footer__header__text"> © 2022 Sindagal, OpenSource. MIT </p>
-			</footer>
+			</footer> */}
 		</React.StrictMode>
 	</>
 }

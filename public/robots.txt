@@ -7,4 +7,3 @@ Host: https://www.denizarca.com
 
 # Sitemaps
 Sitemap: https://www.denizarca.com/sitemap.xml
-Sitemap: https://www.denizarca.com/sitemap-0.xml

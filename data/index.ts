@@ -30,16 +30,15 @@ export default class Data {
 
     private static WorkExperience: () => Detail[] = () => [
         new Detail(
-            {text: "MetaWin - Senior Full Stack Engineer", definition: "Innovators of Web3 Gaming with their game aggregation abstractions known for high returns to players, seemless crypto transactions & known for their code driven digital marketting strategies." }, 
+            {text: "MetaWin - Senior Backend Engineer", definition: "Innovators of Web3 Gaming with their game aggregation abstractions known for high returns to players, seemless crypto transactions & known for their code driven digital marketting strategies." }, 
             "June 2022 - Present", 
             [
-                { text: "Working as a" },
-                { text: "Senior Full Stack Enginner", format: TextFormat.Emphasized },
-                { text: "on our" },
-                { text: "impressive gaming platform", format: TextFormat.Emphasized },
-                { text: "for gaming / gambling & cryptocurrency enthusiasts enabling" },
-                { text: "blockchain based currency transactions", format: TextFormat.Italic },
-                { text: "for gaming domains & providing accessibility for the common user." },
+                { text: "Worked as a" },
+                { text: "Senior Backend Enginner (full stack)", format: TextFormat.Emphasized },
+                { text: "on an" },
+                { text: "online web3 based gaming platform", format: TextFormat.Emphasized },
+                { text: "where I utilised cryptocurrency and blockchain based services" },
+                { text: "to add and maintain integrations within the system..." },
             ],
             [],
             "https://metawin.com/",
